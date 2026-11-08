@@ -1,0 +1,7 @@
+{
+  "instance": "synth",
+  "decoder": "greedy",
+  "n_runs": 5,
+  "eval_budget": 2000,
+  "completed_utc": "2026-07-30T13:10:36.729499+00:00"
+}

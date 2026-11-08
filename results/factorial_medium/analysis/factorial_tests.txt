@@ -1,0 +1,30 @@
+[HV] Friedman chi2=174.1673 p=5.8732e-35 (k=7, n=30)
+    column order: control_greedy, priority_dayplus1, priority_earliest, permutation_dayplus1, permutation_earliest, random_dayplus1, random_earliest
+    vs control (control_greedy):
+      priority_dayplus1          A=1.0000 (     large)  Holm p=3.912e-08  SIG
+      priority_earliest          A=1.0000 (     large)  Holm p=3.912e-08  SIG
+      permutation_dayplus1       A=1.0000 (     large)  Holm p=3.912e-08  SIG
+      permutation_earliest       A=1.0000 (     large)  Holm p=3.912e-08  SIG
+      random_dayplus1            A=1.0000 (     large)  Holm p=3.912e-08  SIG
+      random_earliest            A=1.0000 (     large)  Holm p=3.912e-08  SIG
+
+[IGD+] Friedman chi2=174.3855 p=5.2792e-35 (k=7, n=30)
+    column order: control_greedy, priority_dayplus1, priority_earliest, permutation_dayplus1, permutation_earliest, random_dayplus1, random_earliest
+    vs control (control_greedy):
+      priority_dayplus1          A=0.0000 (     large)  Holm p=3.912e-08  SIG
+      priority_earliest          A=0.0000 (     large)  Holm p=3.912e-08  SIG
+      permutation_dayplus1       A=0.0000 (     large)  Holm p=3.912e-08  SIG
+      permutation_earliest       A=0.0000 (     large)  Holm p=3.912e-08  SIG
+      random_dayplus1            A=0.0000 (     large)  Holm p=3.912e-08  SIG
+      random_earliest            A=0.0000 (     large)  Holm p=3.912e-08  SIG
+
+[spread] Friedman chi2=141.8182 p=4.1419e-28 (k=7, n=30)
+    column order: control_greedy, priority_dayplus1, priority_earliest, permutation_dayplus1, permutation_earliest, random_dayplus1, random_earliest
+    vs control (control_greedy):
+      priority_dayplus1          A=1.0000 (     large)  Holm p=3.912e-08  SIG
+      priority_earliest          A=1.0000 (     large)  Holm p=3.912e-08  SIG
+      permutation_dayplus1       A=0.9256 (     large)  Holm p=3.893e-07  SIG
+      permutation_earliest       A=0.9100 (     large)  Holm p=3.239e-05  SIG
+      random_dayplus1            A=0.8356 (     large)  Holm p=3.411e-05  SIG
+      random_earliest            A=0.8389 (     large)  Holm p=3.538e-05  SIG
+

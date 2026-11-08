@@ -1,0 +1,7 @@
+config,baseline_nsga2,baseline_moead,baseline_pls,doe_repair_noLS,doe_greedy_LS,doe_repair_LS
+baseline_nsga2,1,2.79397e-08,2.79397e-08,2.79397e-08,3.91155e-07,2.79397e-08
+baseline_moead,2.79397e-08,1,0.0384184,2.79397e-08,3.72529e-08,2.79397e-08
+baseline_pls,2.79397e-08,0.0384184,1,2.79397e-08,2.79397e-08,2.79397e-08
+doe_repair_noLS,2.79397e-08,2.79397e-08,2.79397e-08,1,2.79397e-08,0.00110965
+doe_greedy_LS,3.91155e-07,3.72529e-08,2.79397e-08,2.79397e-08,1,2.79397e-08
+doe_repair_LS,2.79397e-08,2.79397e-08,2.79397e-08,0.00110965,2.79397e-08,1

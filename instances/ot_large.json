@@ -1,0 +1,4171 @@
+{
+  "name": "large",
+  "horizon_days": 56,
+  "global_parameters": {
+    "icu_capacity": 2,
+    "ward_capacity": 22,
+    "overflow_allowed": false,
+    "objective_weights": {
+      "ot_idle_weight": 1.0,
+      "icu_overflow_weight": 10.0,
+      "ward_overflow_weight": 5.0
+    },
+    "seed": 20260203
+  },
+  "ots": [
+    {
+      "id": 1,
+      "permitted_specialties": [
+        "general_surgery",
+        "orthopaedics",
+        "neurosurgery"
+      ],
+      "equipment": [
+        "c_arm",
+        "laparoscopy_tower",
+        "neurology_microscope"
+      ],
+      "daily_hours": 8.0,
+      "daily_activation_cost": 1400
+    },
+    {
+      "id": 2,
+      "permitted_specialties": [
+        "obs_gynae",
+        "general_surgery",
+        "orthopaedics"
+      ],
+      "equipment": [
+        "c_arm",
+        "laparoscopy_tower",
+        "neurology_microscope",
+        "robotic_arm"
+      ],
+      "daily_hours": 8.0,
+      "daily_activation_cost": 1400
+    },
+    {
+      "id": 3,
+      "permitted_specialties": [
+        "orthopaedics"
+      ],
+      "equipment": [
+        "c_arm",
+        "laparoscopy_tower",
+        "neurology_microscope",
+        "perfusion_machine"
+      ],
+      "daily_hours": 8.0,
+      "daily_activation_cost": 1000
+    },
+    {
+      "id": 4,
+      "permitted_specialties": [
+        "neurosurgery"
+      ],
+      "equipment": [
+        "c_arm",
+        "neurology_microscope"
+      ],
+      "daily_hours": 8.0,
+      "daily_activation_cost": 1000
+    },
+    {
+      "id": 5,
+      "permitted_specialties": [
+        "cardiothoracic"
+      ],
+      "equipment": [
+        "c_arm",
+        "perfusion_machine"
+      ],
+      "daily_hours": 8.0,
+      "daily_activation_cost": 1000
+    },
+    {
+      "id": 6,
+      "permitted_specialties": [
+        "general_surgery"
+      ],
+      "equipment": [
+        "c_arm",
+        "laparoscopy_tower"
+      ],
+      "daily_hours": 8.0,
+      "daily_activation_cost": 1000
+    }
+  ],
+  "teams": [
+    {
+      "id": 1,
+      "primary_specialty": "obs_gynae",
+      "secondary_specialties": [],
+      "daily_hours_max": 8.0,
+      "max_consecutive_days": 5,
+      "daily_cost": 1500
+    },
+    {
+      "id": 2,
+      "primary_specialty": "orthopaedics",
+      "secondary_specialties": [
+        "cardiothoracic",
+        "neurosurgery"
+      ],
+      "daily_hours_max": 8.0,
+      "max_consecutive_days": 5,
+      "daily_cost": 1700
+    },
+    {
+      "id": 3,
+      "primary_specialty": "general_surgery",
+      "secondary_specialties": [],
+      "daily_hours_max": 8.0,
+      "max_consecutive_days": 5,
+      "daily_cost": 1500
+    },
+    {
+      "id": 4,
+      "primary_specialty": "neurosurgery",
+      "secondary_specialties": [
+        "obs_gynae"
+      ],
+      "daily_hours_max": 8.0,
+      "max_consecutive_days": 5,
+      "daily_cost": 1600
+    },
+    {
+      "id": 5,
+      "primary_specialty": "cardiothoracic",
+      "secondary_specialties": [
+        "obs_gynae"
+      ],
+      "daily_hours_max": 8.0,
+      "max_consecutive_days": 5,
+      "daily_cost": 1600
+    },
+    {
+      "id": 6,
+      "primary_specialty": "obs_gynae",
+      "secondary_specialties": [],
+      "daily_hours_max": 8.0,
+      "max_consecutive_days": 5,
+      "daily_cost": 1500
+    },
+    {
+      "id": 7,
+      "primary_specialty": "orthopaedics",
+      "secondary_specialties": [],
+      "daily_hours_max": 8.0,
+      "max_consecutive_days": 5,
+      "daily_cost": 1500
+    },
+    {
+      "id": 8,
+      "primary_specialty": "general_surgery",
+      "secondary_specialties": [],
+      "daily_hours_max": 8.0,
+      "max_consecutive_days": 5,
+      "daily_cost": 1500
+    },
+    {
+      "id": 9,
+      "primary_specialty": "neurosurgery",
+      "secondary_specialties": [],
+      "daily_hours_max": 8.0,
+      "max_consecutive_days": 5,
+      "daily_cost": 1500
+    },
+    {
+      "id": 10,
+      "primary_specialty": "cardiothoracic",
+      "secondary_specialties": [
+        "general_surgery"
+      ],
+      "daily_hours_max": 8.0,
+      "max_consecutive_days": 5,
+      "daily_cost": 1600
+    },
+    {
+      "id": 11,
+      "primary_specialty": "obs_gynae",
+      "secondary_specialties": [],
+      "daily_hours_max": 8.0,
+      "max_consecutive_days": 5,
+      "daily_cost": 1500
+    },
+    {
+      "id": 12,
+      "primary_specialty": "orthopaedics",
+      "secondary_specialties": [],
+      "daily_hours_max": 8.0,
+      "max_consecutive_days": 5,
+      "daily_cost": 1500
+    }
+  ],
+  "surgery_types": [
+    {
+      "name": "lap_chole",
+      "specialty": "general_surgery",
+      "duration_hr": 1.5,
+      "icu_days": 0,
+      "ward_days": 2,
+      "equipment": [
+        "laparoscopy_tower"
+      ]
+    },
+    {
+      "name": "hernia_repair",
+      "specialty": "general_surgery",
+      "duration_hr": 1.0,
+      "icu_days": 0,
+      "ward_days": 1,
+      "equipment": []
+    },
+    {
+      "name": "colectomy",
+      "specialty": "general_surgery",
+      "duration_hr": 3.5,
+      "icu_days": 1,
+      "ward_days": 5,
+      "equipment": [
+        "laparoscopy_tower"
+      ]
+    },
+    {
+      "name": "hip_replacement",
+      "specialty": "orthopaedics",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 4,
+      "equipment": [
+        "c_arm"
+      ]
+    },
+    {
+      "name": "knee_replacement",
+      "specialty": "orthopaedics",
+      "duration_hr": 2.0,
+      "icu_days": 0,
+      "ward_days": 3,
+      "equipment": [
+        "c_arm"
+      ]
+    },
+    {
+      "name": "spinal_fusion",
+      "specialty": "orthopaedics",
+      "duration_hr": 4.0,
+      "icu_days": 1,
+      "ward_days": 5,
+      "equipment": [
+        "c_arm",
+        "neurology_microscope"
+      ]
+    },
+    {
+      "name": "cabg",
+      "specialty": "cardiothoracic",
+      "duration_hr": 4.5,
+      "icu_days": 2,
+      "ward_days": 6,
+      "equipment": [
+        "perfusion_machine"
+      ]
+    },
+    {
+      "name": "valve_replacement",
+      "specialty": "cardiothoracic",
+      "duration_hr": 4.0,
+      "icu_days": 2,
+      "ward_days": 6,
+      "equipment": [
+        "perfusion_machine"
+      ]
+    },
+    {
+      "name": "craniotomy",
+      "specialty": "neurosurgery",
+      "duration_hr": 5.0,
+      "icu_days": 2,
+      "ward_days": 7,
+      "equipment": [
+        "neurology_microscope"
+      ]
+    },
+    {
+      "name": "lumbar_disc",
+      "specialty": "neurosurgery",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "equipment": [
+        "neurology_microscope"
+      ]
+    },
+    {
+      "name": "elective_cs",
+      "specialty": "obs_gynae",
+      "duration_hr": 1.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "equipment": []
+    },
+    {
+      "name": "hysterectomy",
+      "specialty": "obs_gynae",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "equipment": [
+        "laparoscopy_tower"
+      ]
+    }
+  ],
+  "surgeries": [
+    {
+      "id": 1,
+      "type": "lap_chole",
+      "specialty": "general_surgery",
+      "duration_hr": 1.5,
+      "icu_days": 0,
+      "ward_days": 2,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 1,
+      "earliest_day": 4,
+      "max_wait_days": 37
+    },
+    {
+      "id": 2,
+      "type": "spinal_fusion",
+      "specialty": "orthopaedics",
+      "duration_hr": 4.0,
+      "icu_days": 1,
+      "ward_days": 5,
+      "required_equipment": [
+        "c_arm",
+        "neurology_microscope"
+      ],
+      "priority": 3,
+      "earliest_day": 31,
+      "max_wait_days": 23
+    },
+    {
+      "id": 3,
+      "type": "hernia_repair",
+      "specialty": "general_surgery",
+      "duration_hr": 1.0,
+      "icu_days": 0,
+      "ward_days": 1,
+      "required_equipment": [],
+      "priority": 1,
+      "earliest_day": 1,
+      "max_wait_days": 41
+    },
+    {
+      "id": 4,
+      "type": "hernia_repair",
+      "specialty": "general_surgery",
+      "duration_hr": 1.0,
+      "icu_days": 0,
+      "ward_days": 1,
+      "required_equipment": [],
+      "priority": 3,
+      "earliest_day": 53,
+      "max_wait_days": 3
+    },
+    {
+      "id": 5,
+      "type": "hernia_repair",
+      "specialty": "general_surgery",
+      "duration_hr": 1.0,
+      "icu_days": 0,
+      "ward_days": 1,
+      "required_equipment": [],
+      "priority": 2,
+      "earliest_day": 53,
+      "max_wait_days": 3
+    },
+    {
+      "id": 6,
+      "type": "hysterectomy",
+      "specialty": "obs_gynae",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 5,
+      "earliest_day": 47,
+      "max_wait_days": 8
+    },
+    {
+      "id": 7,
+      "type": "craniotomy",
+      "specialty": "neurosurgery",
+      "duration_hr": 5.0,
+      "icu_days": 2,
+      "ward_days": 7,
+      "required_equipment": [
+        "neurology_microscope"
+      ],
+      "priority": 2,
+      "earliest_day": 47,
+      "max_wait_days": 9
+    },
+    {
+      "id": 8,
+      "type": "lap_chole",
+      "specialty": "general_surgery",
+      "duration_hr": 1.5,
+      "icu_days": 0,
+      "ward_days": 2,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 1,
+      "earliest_day": 54,
+      "max_wait_days": 2
+    },
+    {
+      "id": 9,
+      "type": "hip_replacement",
+      "specialty": "orthopaedics",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 4,
+      "required_equipment": [
+        "c_arm"
+      ],
+      "priority": 2,
+      "earliest_day": 46,
+      "max_wait_days": 10
+    },
+    {
+      "id": 10,
+      "type": "lap_chole",
+      "specialty": "general_surgery",
+      "duration_hr": 1.5,
+      "icu_days": 0,
+      "ward_days": 2,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 4,
+      "earliest_day": 3,
+      "max_wait_days": 9
+    },
+    {
+      "id": 11,
+      "type": "spinal_fusion",
+      "specialty": "orthopaedics",
+      "duration_hr": 4.0,
+      "icu_days": 1,
+      "ward_days": 5,
+      "required_equipment": [
+        "c_arm",
+        "neurology_microscope"
+      ],
+      "priority": 3,
+      "earliest_day": 54,
+      "max_wait_days": 2
+    },
+    {
+      "id": 12,
+      "type": "craniotomy",
+      "specialty": "neurosurgery",
+      "duration_hr": 5.0,
+      "icu_days": 2,
+      "ward_days": 7,
+      "required_equipment": [
+        "neurology_microscope"
+      ],
+      "priority": 2,
+      "earliest_day": 13,
+      "max_wait_days": 26
+    },
+    {
+      "id": 13,
+      "type": "hernia_repair",
+      "specialty": "general_surgery",
+      "duration_hr": 1.0,
+      "icu_days": 0,
+      "ward_days": 1,
+      "required_equipment": [],
+      "priority": 5,
+      "earliest_day": 50,
+      "max_wait_days": 6
+    },
+    {
+      "id": 14,
+      "type": "hernia_repair",
+      "specialty": "general_surgery",
+      "duration_hr": 1.0,
+      "icu_days": 0,
+      "ward_days": 1,
+      "required_equipment": [],
+      "priority": 2,
+      "earliest_day": 9,
+      "max_wait_days": 34
+    },
+    {
+      "id": 15,
+      "type": "spinal_fusion",
+      "specialty": "orthopaedics",
+      "duration_hr": 4.0,
+      "icu_days": 1,
+      "ward_days": 5,
+      "required_equipment": [
+        "c_arm",
+        "neurology_microscope"
+      ],
+      "priority": 3,
+      "earliest_day": 26,
+      "max_wait_days": 27
+    },
+    {
+      "id": 16,
+      "type": "lumbar_disc",
+      "specialty": "neurosurgery",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [
+        "neurology_microscope"
+      ],
+      "priority": 5,
+      "earliest_day": 13,
+      "max_wait_days": 13
+    },
+    {
+      "id": 17,
+      "type": "craniotomy",
+      "specialty": "neurosurgery",
+      "duration_hr": 5.0,
+      "icu_days": 2,
+      "ward_days": 7,
+      "required_equipment": [
+        "neurology_microscope"
+      ],
+      "priority": 4,
+      "earliest_day": 25,
+      "max_wait_days": 18
+    },
+    {
+      "id": 18,
+      "type": "valve_replacement",
+      "specialty": "cardiothoracic",
+      "duration_hr": 4.0,
+      "icu_days": 2,
+      "ward_days": 6,
+      "required_equipment": [
+        "perfusion_machine"
+      ],
+      "priority": 4,
+      "earliest_day": 32,
+      "max_wait_days": 12
+    },
+    {
+      "id": 19,
+      "type": "cabg",
+      "specialty": "cardiothoracic",
+      "duration_hr": 4.5,
+      "icu_days": 2,
+      "ward_days": 6,
+      "required_equipment": [
+        "perfusion_machine"
+      ],
+      "priority": 2,
+      "earliest_day": 42,
+      "max_wait_days": 14
+    },
+    {
+      "id": 20,
+      "type": "valve_replacement",
+      "specialty": "cardiothoracic",
+      "duration_hr": 4.0,
+      "icu_days": 2,
+      "ward_days": 6,
+      "required_equipment": [
+        "perfusion_machine"
+      ],
+      "priority": 4,
+      "earliest_day": 21,
+      "max_wait_days": 13
+    },
+    {
+      "id": 21,
+      "type": "spinal_fusion",
+      "specialty": "orthopaedics",
+      "duration_hr": 4.0,
+      "icu_days": 1,
+      "ward_days": 5,
+      "required_equipment": [
+        "c_arm",
+        "neurology_microscope"
+      ],
+      "priority": 4,
+      "earliest_day": 2,
+      "max_wait_days": 19
+    },
+    {
+      "id": 22,
+      "type": "valve_replacement",
+      "specialty": "cardiothoracic",
+      "duration_hr": 4.0,
+      "icu_days": 2,
+      "ward_days": 6,
+      "required_equipment": [
+        "perfusion_machine"
+      ],
+      "priority": 5,
+      "earliest_day": 47,
+      "max_wait_days": 9
+    },
+    {
+      "id": 23,
+      "type": "spinal_fusion",
+      "specialty": "orthopaedics",
+      "duration_hr": 4.0,
+      "icu_days": 1,
+      "ward_days": 5,
+      "required_equipment": [
+        "c_arm",
+        "neurology_microscope"
+      ],
+      "priority": 4,
+      "earliest_day": 37,
+      "max_wait_days": 18
+    },
+    {
+      "id": 24,
+      "type": "elective_cs",
+      "specialty": "obs_gynae",
+      "duration_hr": 1.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [],
+      "priority": 4,
+      "earliest_day": 8,
+      "max_wait_days": 19
+    },
+    {
+      "id": 25,
+      "type": "craniotomy",
+      "specialty": "neurosurgery",
+      "duration_hr": 5.0,
+      "icu_days": 2,
+      "ward_days": 7,
+      "required_equipment": [
+        "neurology_microscope"
+      ],
+      "priority": 4,
+      "earliest_day": 1,
+      "max_wait_days": 20
+    },
+    {
+      "id": 26,
+      "type": "hernia_repair",
+      "specialty": "general_surgery",
+      "duration_hr": 1.0,
+      "icu_days": 0,
+      "ward_days": 1,
+      "required_equipment": [],
+      "priority": 4,
+      "earliest_day": 19,
+      "max_wait_days": 11
+    },
+    {
+      "id": 27,
+      "type": "hip_replacement",
+      "specialty": "orthopaedics",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 4,
+      "required_equipment": [
+        "c_arm"
+      ],
+      "priority": 3,
+      "earliest_day": 38,
+      "max_wait_days": 15
+    },
+    {
+      "id": 28,
+      "type": "spinal_fusion",
+      "specialty": "orthopaedics",
+      "duration_hr": 4.0,
+      "icu_days": 1,
+      "ward_days": 5,
+      "required_equipment": [
+        "c_arm",
+        "neurology_microscope"
+      ],
+      "priority": 2,
+      "earliest_day": 51,
+      "max_wait_days": 5
+    },
+    {
+      "id": 29,
+      "type": "craniotomy",
+      "specialty": "neurosurgery",
+      "duration_hr": 5.0,
+      "icu_days": 2,
+      "ward_days": 7,
+      "required_equipment": [
+        "neurology_microscope"
+      ],
+      "priority": 4,
+      "earliest_day": 46,
+      "max_wait_days": 10
+    },
+    {
+      "id": 30,
+      "type": "hysterectomy",
+      "specialty": "obs_gynae",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 3,
+      "earliest_day": 39,
+      "max_wait_days": 14
+    },
+    {
+      "id": 31,
+      "type": "valve_replacement",
+      "specialty": "cardiothoracic",
+      "duration_hr": 4.0,
+      "icu_days": 2,
+      "ward_days": 6,
+      "required_equipment": [
+        "perfusion_machine"
+      ],
+      "priority": 3,
+      "earliest_day": 2,
+      "max_wait_days": 20
+    },
+    {
+      "id": 32,
+      "type": "knee_replacement",
+      "specialty": "orthopaedics",
+      "duration_hr": 2.0,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [
+        "c_arm"
+      ],
+      "priority": 3,
+      "earliest_day": 49,
+      "max_wait_days": 7
+    },
+    {
+      "id": 33,
+      "type": "hip_replacement",
+      "specialty": "orthopaedics",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 4,
+      "required_equipment": [
+        "c_arm"
+      ],
+      "priority": 3,
+      "earliest_day": 3,
+      "max_wait_days": 23
+    },
+    {
+      "id": 34,
+      "type": "spinal_fusion",
+      "specialty": "orthopaedics",
+      "duration_hr": 4.0,
+      "icu_days": 1,
+      "ward_days": 5,
+      "required_equipment": [
+        "c_arm",
+        "neurology_microscope"
+      ],
+      "priority": 3,
+      "earliest_day": 17,
+      "max_wait_days": 19
+    },
+    {
+      "id": 35,
+      "type": "hysterectomy",
+      "specialty": "obs_gynae",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 2,
+      "earliest_day": 19,
+      "max_wait_days": 23
+    },
+    {
+      "id": 36,
+      "type": "cabg",
+      "specialty": "cardiothoracic",
+      "duration_hr": 4.5,
+      "icu_days": 2,
+      "ward_days": 6,
+      "required_equipment": [
+        "perfusion_machine"
+      ],
+      "priority": 3,
+      "earliest_day": 11,
+      "max_wait_days": 14
+    },
+    {
+      "id": 37,
+      "type": "knee_replacement",
+      "specialty": "orthopaedics",
+      "duration_hr": 2.0,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [
+        "c_arm"
+      ],
+      "priority": 4,
+      "earliest_day": 7,
+      "max_wait_days": 17
+    },
+    {
+      "id": 38,
+      "type": "elective_cs",
+      "specialty": "obs_gynae",
+      "duration_hr": 1.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [],
+      "priority": 5,
+      "earliest_day": 3,
+      "max_wait_days": 13
+    },
+    {
+      "id": 39,
+      "type": "hip_replacement",
+      "specialty": "orthopaedics",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 4,
+      "required_equipment": [
+        "c_arm"
+      ],
+      "priority": 2,
+      "earliest_day": 13,
+      "max_wait_days": 36
+    },
+    {
+      "id": 40,
+      "type": "craniotomy",
+      "specialty": "neurosurgery",
+      "duration_hr": 5.0,
+      "icu_days": 2,
+      "ward_days": 7,
+      "required_equipment": [
+        "neurology_microscope"
+      ],
+      "priority": 3,
+      "earliest_day": 9,
+      "max_wait_days": 28
+    },
+    {
+      "id": 41,
+      "type": "valve_replacement",
+      "specialty": "cardiothoracic",
+      "duration_hr": 4.0,
+      "icu_days": 2,
+      "ward_days": 6,
+      "required_equipment": [
+        "perfusion_machine"
+      ],
+      "priority": 2,
+      "earliest_day": 3,
+      "max_wait_days": 23
+    },
+    {
+      "id": 42,
+      "type": "valve_replacement",
+      "specialty": "cardiothoracic",
+      "duration_hr": 4.0,
+      "icu_days": 2,
+      "ward_days": 6,
+      "required_equipment": [
+        "perfusion_machine"
+      ],
+      "priority": 3,
+      "earliest_day": 33,
+      "max_wait_days": 23
+    },
+    {
+      "id": 43,
+      "type": "hysterectomy",
+      "specialty": "obs_gynae",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 2,
+      "earliest_day": 29,
+      "max_wait_days": 27
+    },
+    {
+      "id": 44,
+      "type": "lap_chole",
+      "specialty": "general_surgery",
+      "duration_hr": 1.5,
+      "icu_days": 0,
+      "ward_days": 2,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 4,
+      "earliest_day": 9,
+      "max_wait_days": 10
+    },
+    {
+      "id": 45,
+      "type": "hysterectomy",
+      "specialty": "obs_gynae",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 4,
+      "earliest_day": 36,
+      "max_wait_days": 8
+    },
+    {
+      "id": 46,
+      "type": "colectomy",
+      "specialty": "general_surgery",
+      "duration_hr": 3.5,
+      "icu_days": 1,
+      "ward_days": 5,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 2,
+      "earliest_day": 10,
+      "max_wait_days": 22
+    },
+    {
+      "id": 47,
+      "type": "hysterectomy",
+      "specialty": "obs_gynae",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 2,
+      "earliest_day": 9,
+      "max_wait_days": 34
+    },
+    {
+      "id": 48,
+      "type": "hip_replacement",
+      "specialty": "orthopaedics",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 4,
+      "required_equipment": [
+        "c_arm"
+      ],
+      "priority": 5,
+      "earliest_day": 8,
+      "max_wait_days": 12
+    },
+    {
+      "id": 49,
+      "type": "lumbar_disc",
+      "specialty": "neurosurgery",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [
+        "neurology_microscope"
+      ],
+      "priority": 2,
+      "earliest_day": 1,
+      "max_wait_days": 32
+    },
+    {
+      "id": 50,
+      "type": "valve_replacement",
+      "specialty": "cardiothoracic",
+      "duration_hr": 4.0,
+      "icu_days": 2,
+      "ward_days": 6,
+      "required_equipment": [
+        "perfusion_machine"
+      ],
+      "priority": 2,
+      "earliest_day": 14,
+      "max_wait_days": 39
+    },
+    {
+      "id": 51,
+      "type": "knee_replacement",
+      "specialty": "orthopaedics",
+      "duration_hr": 2.0,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [
+        "c_arm"
+      ],
+      "priority": 5,
+      "earliest_day": 6,
+      "max_wait_days": 14
+    },
+    {
+      "id": 52,
+      "type": "elective_cs",
+      "specialty": "obs_gynae",
+      "duration_hr": 1.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [],
+      "priority": 3,
+      "earliest_day": 8,
+      "max_wait_days": 26
+    },
+    {
+      "id": 53,
+      "type": "hip_replacement",
+      "specialty": "orthopaedics",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 4,
+      "required_equipment": [
+        "c_arm"
+      ],
+      "priority": 5,
+      "earliest_day": 2,
+      "max_wait_days": 9
+    },
+    {
+      "id": 54,
+      "type": "hip_replacement",
+      "specialty": "orthopaedics",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 4,
+      "required_equipment": [
+        "c_arm"
+      ],
+      "priority": 2,
+      "earliest_day": 16,
+      "max_wait_days": 30
+    },
+    {
+      "id": 55,
+      "type": "lap_chole",
+      "specialty": "general_surgery",
+      "duration_hr": 1.5,
+      "icu_days": 0,
+      "ward_days": 2,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 2,
+      "earliest_day": 35,
+      "max_wait_days": 21
+    },
+    {
+      "id": 56,
+      "type": "hysterectomy",
+      "specialty": "obs_gynae",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 3,
+      "earliest_day": 7,
+      "max_wait_days": 18
+    },
+    {
+      "id": 57,
+      "type": "lumbar_disc",
+      "specialty": "neurosurgery",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [
+        "neurology_microscope"
+      ],
+      "priority": 4,
+      "earliest_day": 9,
+      "max_wait_days": 10
+    },
+    {
+      "id": 58,
+      "type": "craniotomy",
+      "specialty": "neurosurgery",
+      "duration_hr": 5.0,
+      "icu_days": 2,
+      "ward_days": 7,
+      "required_equipment": [
+        "neurology_microscope"
+      ],
+      "priority": 3,
+      "earliest_day": 52,
+      "max_wait_days": 4
+    },
+    {
+      "id": 59,
+      "type": "lumbar_disc",
+      "specialty": "neurosurgery",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [
+        "neurology_microscope"
+      ],
+      "priority": 3,
+      "earliest_day": 50,
+      "max_wait_days": 6
+    },
+    {
+      "id": 60,
+      "type": "elective_cs",
+      "specialty": "obs_gynae",
+      "duration_hr": 1.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [],
+      "priority": 5,
+      "earliest_day": 34,
+      "max_wait_days": 13
+    },
+    {
+      "id": 61,
+      "type": "colectomy",
+      "specialty": "general_surgery",
+      "duration_hr": 3.5,
+      "icu_days": 1,
+      "ward_days": 5,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 3,
+      "earliest_day": 3,
+      "max_wait_days": 18
+    },
+    {
+      "id": 62,
+      "type": "hysterectomy",
+      "specialty": "obs_gynae",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 3,
+      "earliest_day": 26,
+      "max_wait_days": 21
+    },
+    {
+      "id": 63,
+      "type": "cabg",
+      "specialty": "cardiothoracic",
+      "duration_hr": 4.5,
+      "icu_days": 2,
+      "ward_days": 6,
+      "required_equipment": [
+        "perfusion_machine"
+      ],
+      "priority": 3,
+      "earliest_day": 37,
+      "max_wait_days": 19
+    },
+    {
+      "id": 64,
+      "type": "lap_chole",
+      "specialty": "general_surgery",
+      "duration_hr": 1.5,
+      "icu_days": 0,
+      "ward_days": 2,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 4,
+      "earliest_day": 21,
+      "max_wait_days": 16
+    },
+    {
+      "id": 65,
+      "type": "hysterectomy",
+      "specialty": "obs_gynae",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 5,
+      "earliest_day": 44,
+      "max_wait_days": 9
+    },
+    {
+      "id": 66,
+      "type": "colectomy",
+      "specialty": "general_surgery",
+      "duration_hr": 3.5,
+      "icu_days": 1,
+      "ward_days": 5,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 2,
+      "earliest_day": 22,
+      "max_wait_days": 29
+    },
+    {
+      "id": 67,
+      "type": "elective_cs",
+      "specialty": "obs_gynae",
+      "duration_hr": 1.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [],
+      "priority": 3,
+      "earliest_day": 38,
+      "max_wait_days": 18
+    },
+    {
+      "id": 68,
+      "type": "valve_replacement",
+      "specialty": "cardiothoracic",
+      "duration_hr": 4.0,
+      "icu_days": 2,
+      "ward_days": 6,
+      "required_equipment": [
+        "perfusion_machine"
+      ],
+      "priority": 1,
+      "earliest_day": 28,
+      "max_wait_days": 28
+    },
+    {
+      "id": 69,
+      "type": "hysterectomy",
+      "specialty": "obs_gynae",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 4,
+      "earliest_day": 35,
+      "max_wait_days": 12
+    },
+    {
+      "id": 70,
+      "type": "valve_replacement",
+      "specialty": "cardiothoracic",
+      "duration_hr": 4.0,
+      "icu_days": 2,
+      "ward_days": 6,
+      "required_equipment": [
+        "perfusion_machine"
+      ],
+      "priority": 1,
+      "earliest_day": 52,
+      "max_wait_days": 4
+    },
+    {
+      "id": 71,
+      "type": "craniotomy",
+      "specialty": "neurosurgery",
+      "duration_hr": 5.0,
+      "icu_days": 2,
+      "ward_days": 7,
+      "required_equipment": [
+        "neurology_microscope"
+      ],
+      "priority": 3,
+      "earliest_day": 16,
+      "max_wait_days": 27
+    },
+    {
+      "id": 72,
+      "type": "hernia_repair",
+      "specialty": "general_surgery",
+      "duration_hr": 1.0,
+      "icu_days": 0,
+      "ward_days": 1,
+      "required_equipment": [],
+      "priority": 1,
+      "earliest_day": 37,
+      "max_wait_days": 19
+    },
+    {
+      "id": 73,
+      "type": "hysterectomy",
+      "specialty": "obs_gynae",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 5,
+      "earliest_day": 15,
+      "max_wait_days": 8
+    },
+    {
+      "id": 74,
+      "type": "lumbar_disc",
+      "specialty": "neurosurgery",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [
+        "neurology_microscope"
+      ],
+      "priority": 3,
+      "earliest_day": 2,
+      "max_wait_days": 14
+    },
+    {
+      "id": 75,
+      "type": "lap_chole",
+      "specialty": "general_surgery",
+      "duration_hr": 1.5,
+      "icu_days": 0,
+      "ward_days": 2,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 5,
+      "earliest_day": 46,
+      "max_wait_days": 10
+    },
+    {
+      "id": 76,
+      "type": "hip_replacement",
+      "specialty": "orthopaedics",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 4,
+      "required_equipment": [
+        "c_arm"
+      ],
+      "priority": 4,
+      "earliest_day": 8,
+      "max_wait_days": 9
+    },
+    {
+      "id": 77,
+      "type": "hernia_repair",
+      "specialty": "general_surgery",
+      "duration_hr": 1.0,
+      "icu_days": 0,
+      "ward_days": 1,
+      "required_equipment": [],
+      "priority": 3,
+      "earliest_day": 49,
+      "max_wait_days": 7
+    },
+    {
+      "id": 78,
+      "type": "spinal_fusion",
+      "specialty": "orthopaedics",
+      "duration_hr": 4.0,
+      "icu_days": 1,
+      "ward_days": 5,
+      "required_equipment": [
+        "c_arm",
+        "neurology_microscope"
+      ],
+      "priority": 3,
+      "earliest_day": 30,
+      "max_wait_days": 25
+    },
+    {
+      "id": 79,
+      "type": "colectomy",
+      "specialty": "general_surgery",
+      "duration_hr": 3.5,
+      "icu_days": 1,
+      "ward_days": 5,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 4,
+      "earliest_day": 35,
+      "max_wait_days": 20
+    },
+    {
+      "id": 80,
+      "type": "elective_cs",
+      "specialty": "obs_gynae",
+      "duration_hr": 1.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [],
+      "priority": 4,
+      "earliest_day": 41,
+      "max_wait_days": 10
+    },
+    {
+      "id": 81,
+      "type": "valve_replacement",
+      "specialty": "cardiothoracic",
+      "duration_hr": 4.0,
+      "icu_days": 2,
+      "ward_days": 6,
+      "required_equipment": [
+        "perfusion_machine"
+      ],
+      "priority": 4,
+      "earliest_day": 34,
+      "max_wait_days": 15
+    },
+    {
+      "id": 82,
+      "type": "spinal_fusion",
+      "specialty": "orthopaedics",
+      "duration_hr": 4.0,
+      "icu_days": 1,
+      "ward_days": 5,
+      "required_equipment": [
+        "c_arm",
+        "neurology_microscope"
+      ],
+      "priority": 2,
+      "earliest_day": 45,
+      "max_wait_days": 11
+    },
+    {
+      "id": 83,
+      "type": "craniotomy",
+      "specialty": "neurosurgery",
+      "duration_hr": 5.0,
+      "icu_days": 2,
+      "ward_days": 7,
+      "required_equipment": [
+        "neurology_microscope"
+      ],
+      "priority": 1,
+      "earliest_day": 16,
+      "max_wait_days": 38
+    },
+    {
+      "id": 84,
+      "type": "colectomy",
+      "specialty": "general_surgery",
+      "duration_hr": 3.5,
+      "icu_days": 1,
+      "ward_days": 5,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 3,
+      "earliest_day": 40,
+      "max_wait_days": 16
+    },
+    {
+      "id": 85,
+      "type": "lumbar_disc",
+      "specialty": "neurosurgery",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [
+        "neurology_microscope"
+      ],
+      "priority": 2,
+      "earliest_day": 27,
+      "max_wait_days": 29
+    },
+    {
+      "id": 86,
+      "type": "colectomy",
+      "specialty": "general_surgery",
+      "duration_hr": 3.5,
+      "icu_days": 1,
+      "ward_days": 5,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 3,
+      "earliest_day": 5,
+      "max_wait_days": 15
+    },
+    {
+      "id": 87,
+      "type": "hip_replacement",
+      "specialty": "orthopaedics",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 4,
+      "required_equipment": [
+        "c_arm"
+      ],
+      "priority": 3,
+      "earliest_day": 12,
+      "max_wait_days": 27
+    },
+    {
+      "id": 88,
+      "type": "lap_chole",
+      "specialty": "general_surgery",
+      "duration_hr": 1.5,
+      "icu_days": 0,
+      "ward_days": 2,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 3,
+      "earliest_day": 13,
+      "max_wait_days": 15
+    },
+    {
+      "id": 89,
+      "type": "lap_chole",
+      "specialty": "general_surgery",
+      "duration_hr": 1.5,
+      "icu_days": 0,
+      "ward_days": 2,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 3,
+      "earliest_day": 46,
+      "max_wait_days": 10
+    },
+    {
+      "id": 90,
+      "type": "hernia_repair",
+      "specialty": "general_surgery",
+      "duration_hr": 1.0,
+      "icu_days": 0,
+      "ward_days": 1,
+      "required_equipment": [],
+      "priority": 3,
+      "earliest_day": 17,
+      "max_wait_days": 14
+    },
+    {
+      "id": 91,
+      "type": "hip_replacement",
+      "specialty": "orthopaedics",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 4,
+      "required_equipment": [
+        "c_arm"
+      ],
+      "priority": 2,
+      "earliest_day": 11,
+      "max_wait_days": 38
+    },
+    {
+      "id": 92,
+      "type": "elective_cs",
+      "specialty": "obs_gynae",
+      "duration_hr": 1.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [],
+      "priority": 3,
+      "earliest_day": 22,
+      "max_wait_days": 26
+    },
+    {
+      "id": 93,
+      "type": "hernia_repair",
+      "specialty": "general_surgery",
+      "duration_hr": 1.0,
+      "icu_days": 0,
+      "ward_days": 1,
+      "required_equipment": [],
+      "priority": 4,
+      "earliest_day": 47,
+      "max_wait_days": 9
+    },
+    {
+      "id": 94,
+      "type": "hysterectomy",
+      "specialty": "obs_gynae",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 3,
+      "earliest_day": 49,
+      "max_wait_days": 7
+    },
+    {
+      "id": 95,
+      "type": "hysterectomy",
+      "specialty": "obs_gynae",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 2,
+      "earliest_day": 52,
+      "max_wait_days": 4
+    },
+    {
+      "id": 96,
+      "type": "knee_replacement",
+      "specialty": "orthopaedics",
+      "duration_hr": 2.0,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [
+        "c_arm"
+      ],
+      "priority": 3,
+      "earliest_day": 27,
+      "max_wait_days": 20
+    },
+    {
+      "id": 97,
+      "type": "lumbar_disc",
+      "specialty": "neurosurgery",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [
+        "neurology_microscope"
+      ],
+      "priority": 2,
+      "earliest_day": 10,
+      "max_wait_days": 39
+    },
+    {
+      "id": 98,
+      "type": "lumbar_disc",
+      "specialty": "neurosurgery",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [
+        "neurology_microscope"
+      ],
+      "priority": 2,
+      "earliest_day": 36,
+      "max_wait_days": 20
+    },
+    {
+      "id": 99,
+      "type": "craniotomy",
+      "specialty": "neurosurgery",
+      "duration_hr": 5.0,
+      "icu_days": 2,
+      "ward_days": 7,
+      "required_equipment": [
+        "neurology_microscope"
+      ],
+      "priority": 3,
+      "earliest_day": 27,
+      "max_wait_days": 21
+    },
+    {
+      "id": 100,
+      "type": "craniotomy",
+      "specialty": "neurosurgery",
+      "duration_hr": 5.0,
+      "icu_days": 2,
+      "ward_days": 7,
+      "required_equipment": [
+        "neurology_microscope"
+      ],
+      "priority": 3,
+      "earliest_day": 27,
+      "max_wait_days": 20
+    },
+    {
+      "id": 101,
+      "type": "lap_chole",
+      "specialty": "general_surgery",
+      "duration_hr": 1.5,
+      "icu_days": 0,
+      "ward_days": 2,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 4,
+      "earliest_day": 52,
+      "max_wait_days": 4
+    },
+    {
+      "id": 102,
+      "type": "hysterectomy",
+      "specialty": "obs_gynae",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 2,
+      "earliest_day": 25,
+      "max_wait_days": 31
+    },
+    {
+      "id": 103,
+      "type": "lap_chole",
+      "specialty": "general_surgery",
+      "duration_hr": 1.5,
+      "icu_days": 0,
+      "ward_days": 2,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 2,
+      "earliest_day": 14,
+      "max_wait_days": 31
+    },
+    {
+      "id": 104,
+      "type": "spinal_fusion",
+      "specialty": "orthopaedics",
+      "duration_hr": 4.0,
+      "icu_days": 1,
+      "ward_days": 5,
+      "required_equipment": [
+        "c_arm",
+        "neurology_microscope"
+      ],
+      "priority": 4,
+      "earliest_day": 54,
+      "max_wait_days": 2
+    },
+    {
+      "id": 105,
+      "type": "colectomy",
+      "specialty": "general_surgery",
+      "duration_hr": 3.5,
+      "icu_days": 1,
+      "ward_days": 5,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 3,
+      "earliest_day": 21,
+      "max_wait_days": 16
+    },
+    {
+      "id": 106,
+      "type": "cabg",
+      "specialty": "cardiothoracic",
+      "duration_hr": 4.5,
+      "icu_days": 2,
+      "ward_days": 6,
+      "required_equipment": [
+        "perfusion_machine"
+      ],
+      "priority": 4,
+      "earliest_day": 13,
+      "max_wait_days": 8
+    },
+    {
+      "id": 107,
+      "type": "knee_replacement",
+      "specialty": "orthopaedics",
+      "duration_hr": 2.0,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [
+        "c_arm"
+      ],
+      "priority": 2,
+      "earliest_day": 14,
+      "max_wait_days": 31
+    },
+    {
+      "id": 108,
+      "type": "hip_replacement",
+      "specialty": "orthopaedics",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 4,
+      "required_equipment": [
+        "c_arm"
+      ],
+      "priority": 3,
+      "earliest_day": 36,
+      "max_wait_days": 16
+    },
+    {
+      "id": 109,
+      "type": "valve_replacement",
+      "specialty": "cardiothoracic",
+      "duration_hr": 4.0,
+      "icu_days": 2,
+      "ward_days": 6,
+      "required_equipment": [
+        "perfusion_machine"
+      ],
+      "priority": 3,
+      "earliest_day": 45,
+      "max_wait_days": 11
+    },
+    {
+      "id": 110,
+      "type": "colectomy",
+      "specialty": "general_surgery",
+      "duration_hr": 3.5,
+      "icu_days": 1,
+      "ward_days": 5,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 4,
+      "earliest_day": 35,
+      "max_wait_days": 19
+    },
+    {
+      "id": 111,
+      "type": "lumbar_disc",
+      "specialty": "neurosurgery",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [
+        "neurology_microscope"
+      ],
+      "priority": 5,
+      "earliest_day": 12,
+      "max_wait_days": 6
+    },
+    {
+      "id": 112,
+      "type": "hysterectomy",
+      "specialty": "obs_gynae",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 2,
+      "earliest_day": 54,
+      "max_wait_days": 2
+    },
+    {
+      "id": 113,
+      "type": "lap_chole",
+      "specialty": "general_surgery",
+      "duration_hr": 1.5,
+      "icu_days": 0,
+      "ward_days": 2,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 4,
+      "earliest_day": 4,
+      "max_wait_days": 9
+    },
+    {
+      "id": 114,
+      "type": "hip_replacement",
+      "specialty": "orthopaedics",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 4,
+      "required_equipment": [
+        "c_arm"
+      ],
+      "priority": 5,
+      "earliest_day": 36,
+      "max_wait_days": 9
+    },
+    {
+      "id": 115,
+      "type": "knee_replacement",
+      "specialty": "orthopaedics",
+      "duration_hr": 2.0,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [
+        "c_arm"
+      ],
+      "priority": 5,
+      "earliest_day": 6,
+      "max_wait_days": 7
+    },
+    {
+      "id": 116,
+      "type": "lumbar_disc",
+      "specialty": "neurosurgery",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [
+        "neurology_microscope"
+      ],
+      "priority": 2,
+      "earliest_day": 49,
+      "max_wait_days": 7
+    },
+    {
+      "id": 117,
+      "type": "cabg",
+      "specialty": "cardiothoracic",
+      "duration_hr": 4.5,
+      "icu_days": 2,
+      "ward_days": 6,
+      "required_equipment": [
+        "perfusion_machine"
+      ],
+      "priority": 4,
+      "earliest_day": 6,
+      "max_wait_days": 9
+    },
+    {
+      "id": 118,
+      "type": "spinal_fusion",
+      "specialty": "orthopaedics",
+      "duration_hr": 4.0,
+      "icu_days": 1,
+      "ward_days": 5,
+      "required_equipment": [
+        "c_arm",
+        "neurology_microscope"
+      ],
+      "priority": 2,
+      "earliest_day": 23,
+      "max_wait_days": 22
+    },
+    {
+      "id": 119,
+      "type": "hernia_repair",
+      "specialty": "general_surgery",
+      "duration_hr": 1.0,
+      "icu_days": 0,
+      "ward_days": 1,
+      "required_equipment": [],
+      "priority": 3,
+      "earliest_day": 48,
+      "max_wait_days": 8
+    },
+    {
+      "id": 120,
+      "type": "craniotomy",
+      "specialty": "neurosurgery",
+      "duration_hr": 5.0,
+      "icu_days": 2,
+      "ward_days": 7,
+      "required_equipment": [
+        "neurology_microscope"
+      ],
+      "priority": 3,
+      "earliest_day": 26,
+      "max_wait_days": 25
+    },
+    {
+      "id": 121,
+      "type": "colectomy",
+      "specialty": "general_surgery",
+      "duration_hr": 3.5,
+      "icu_days": 1,
+      "ward_days": 5,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 2,
+      "earliest_day": 42,
+      "max_wait_days": 14
+    },
+    {
+      "id": 122,
+      "type": "elective_cs",
+      "specialty": "obs_gynae",
+      "duration_hr": 1.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [],
+      "priority": 3,
+      "earliest_day": 50,
+      "max_wait_days": 6
+    },
+    {
+      "id": 123,
+      "type": "lap_chole",
+      "specialty": "general_surgery",
+      "duration_hr": 1.5,
+      "icu_days": 0,
+      "ward_days": 2,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 2,
+      "earliest_day": 33,
+      "max_wait_days": 23
+    },
+    {
+      "id": 124,
+      "type": "spinal_fusion",
+      "specialty": "orthopaedics",
+      "duration_hr": 4.0,
+      "icu_days": 1,
+      "ward_days": 5,
+      "required_equipment": [
+        "c_arm",
+        "neurology_microscope"
+      ],
+      "priority": 2,
+      "earliest_day": 20,
+      "max_wait_days": 35
+    },
+    {
+      "id": 125,
+      "type": "colectomy",
+      "specialty": "general_surgery",
+      "duration_hr": 3.5,
+      "icu_days": 1,
+      "ward_days": 5,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 5,
+      "earliest_day": 11,
+      "max_wait_days": 6
+    },
+    {
+      "id": 126,
+      "type": "cabg",
+      "specialty": "cardiothoracic",
+      "duration_hr": 4.5,
+      "icu_days": 2,
+      "ward_days": 6,
+      "required_equipment": [
+        "perfusion_machine"
+      ],
+      "priority": 3,
+      "earliest_day": 41,
+      "max_wait_days": 15
+    },
+    {
+      "id": 127,
+      "type": "hernia_repair",
+      "specialty": "general_surgery",
+      "duration_hr": 1.0,
+      "icu_days": 0,
+      "ward_days": 1,
+      "required_equipment": [],
+      "priority": 2,
+      "earliest_day": 21,
+      "max_wait_days": 24
+    },
+    {
+      "id": 128,
+      "type": "knee_replacement",
+      "specialty": "orthopaedics",
+      "duration_hr": 2.0,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [
+        "c_arm"
+      ],
+      "priority": 4,
+      "earliest_day": 38,
+      "max_wait_days": 12
+    },
+    {
+      "id": 129,
+      "type": "spinal_fusion",
+      "specialty": "orthopaedics",
+      "duration_hr": 4.0,
+      "icu_days": 1,
+      "ward_days": 5,
+      "required_equipment": [
+        "c_arm",
+        "neurology_microscope"
+      ],
+      "priority": 2,
+      "earliest_day": 54,
+      "max_wait_days": 2
+    },
+    {
+      "id": 130,
+      "type": "cabg",
+      "specialty": "cardiothoracic",
+      "duration_hr": 4.5,
+      "icu_days": 2,
+      "ward_days": 6,
+      "required_equipment": [
+        "perfusion_machine"
+      ],
+      "priority": 1,
+      "earliest_day": 27,
+      "max_wait_days": 29
+    },
+    {
+      "id": 131,
+      "type": "hip_replacement",
+      "specialty": "orthopaedics",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 4,
+      "required_equipment": [
+        "c_arm"
+      ],
+      "priority": 2,
+      "earliest_day": 15,
+      "max_wait_days": 38
+    },
+    {
+      "id": 132,
+      "type": "lap_chole",
+      "specialty": "general_surgery",
+      "duration_hr": 1.5,
+      "icu_days": 0,
+      "ward_days": 2,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 4,
+      "earliest_day": 33,
+      "max_wait_days": 17
+    },
+    {
+      "id": 133,
+      "type": "craniotomy",
+      "specialty": "neurosurgery",
+      "duration_hr": 5.0,
+      "icu_days": 2,
+      "ward_days": 7,
+      "required_equipment": [
+        "neurology_microscope"
+      ],
+      "priority": 4,
+      "earliest_day": 8,
+      "max_wait_days": 9
+    },
+    {
+      "id": 134,
+      "type": "craniotomy",
+      "specialty": "neurosurgery",
+      "duration_hr": 5.0,
+      "icu_days": 2,
+      "ward_days": 7,
+      "required_equipment": [
+        "neurology_microscope"
+      ],
+      "priority": 3,
+      "earliest_day": 25,
+      "max_wait_days": 18
+    },
+    {
+      "id": 135,
+      "type": "lap_chole",
+      "specialty": "general_surgery",
+      "duration_hr": 1.5,
+      "icu_days": 0,
+      "ward_days": 2,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 2,
+      "earliest_day": 6,
+      "max_wait_days": 27
+    },
+    {
+      "id": 136,
+      "type": "hysterectomy",
+      "specialty": "obs_gynae",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 5,
+      "earliest_day": 44,
+      "max_wait_days": 9
+    },
+    {
+      "id": 137,
+      "type": "spinal_fusion",
+      "specialty": "orthopaedics",
+      "duration_hr": 4.0,
+      "icu_days": 1,
+      "ward_days": 5,
+      "required_equipment": [
+        "c_arm",
+        "neurology_microscope"
+      ],
+      "priority": 3,
+      "earliest_day": 25,
+      "max_wait_days": 15
+    },
+    {
+      "id": 138,
+      "type": "hip_replacement",
+      "specialty": "orthopaedics",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 4,
+      "required_equipment": [
+        "c_arm"
+      ],
+      "priority": 4,
+      "earliest_day": 39,
+      "max_wait_days": 12
+    },
+    {
+      "id": 139,
+      "type": "cabg",
+      "specialty": "cardiothoracic",
+      "duration_hr": 4.5,
+      "icu_days": 2,
+      "ward_days": 6,
+      "required_equipment": [
+        "perfusion_machine"
+      ],
+      "priority": 2,
+      "earliest_day": 53,
+      "max_wait_days": 3
+    },
+    {
+      "id": 140,
+      "type": "colectomy",
+      "specialty": "general_surgery",
+      "duration_hr": 3.5,
+      "icu_days": 1,
+      "ward_days": 5,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 5,
+      "earliest_day": 29,
+      "max_wait_days": 8
+    },
+    {
+      "id": 141,
+      "type": "spinal_fusion",
+      "specialty": "orthopaedics",
+      "duration_hr": 4.0,
+      "icu_days": 1,
+      "ward_days": 5,
+      "required_equipment": [
+        "c_arm",
+        "neurology_microscope"
+      ],
+      "priority": 3,
+      "earliest_day": 3,
+      "max_wait_days": 26
+    },
+    {
+      "id": 142,
+      "type": "knee_replacement",
+      "specialty": "orthopaedics",
+      "duration_hr": 2.0,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [
+        "c_arm"
+      ],
+      "priority": 3,
+      "earliest_day": 10,
+      "max_wait_days": 14
+    },
+    {
+      "id": 143,
+      "type": "colectomy",
+      "specialty": "general_surgery",
+      "duration_hr": 3.5,
+      "icu_days": 1,
+      "ward_days": 5,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 3,
+      "earliest_day": 12,
+      "max_wait_days": 28
+    },
+    {
+      "id": 144,
+      "type": "knee_replacement",
+      "specialty": "orthopaedics",
+      "duration_hr": 2.0,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [
+        "c_arm"
+      ],
+      "priority": 3,
+      "earliest_day": 49,
+      "max_wait_days": 7
+    },
+    {
+      "id": 145,
+      "type": "lap_chole",
+      "specialty": "general_surgery",
+      "duration_hr": 1.5,
+      "icu_days": 0,
+      "ward_days": 2,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 3,
+      "earliest_day": 32,
+      "max_wait_days": 20
+    },
+    {
+      "id": 146,
+      "type": "elective_cs",
+      "specialty": "obs_gynae",
+      "duration_hr": 1.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [],
+      "priority": 3,
+      "earliest_day": 6,
+      "max_wait_days": 15
+    },
+    {
+      "id": 147,
+      "type": "colectomy",
+      "specialty": "general_surgery",
+      "duration_hr": 3.5,
+      "icu_days": 1,
+      "ward_days": 5,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 3,
+      "earliest_day": 46,
+      "max_wait_days": 10
+    },
+    {
+      "id": 148,
+      "type": "colectomy",
+      "specialty": "general_surgery",
+      "duration_hr": 3.5,
+      "icu_days": 1,
+      "ward_days": 5,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 4,
+      "earliest_day": 7,
+      "max_wait_days": 19
+    },
+    {
+      "id": 149,
+      "type": "cabg",
+      "specialty": "cardiothoracic",
+      "duration_hr": 4.5,
+      "icu_days": 2,
+      "ward_days": 6,
+      "required_equipment": [
+        "perfusion_machine"
+      ],
+      "priority": 1,
+      "earliest_day": 15,
+      "max_wait_days": 41
+    },
+    {
+      "id": 150,
+      "type": "valve_replacement",
+      "specialty": "cardiothoracic",
+      "duration_hr": 4.0,
+      "icu_days": 2,
+      "ward_days": 6,
+      "required_equipment": [
+        "perfusion_machine"
+      ],
+      "priority": 2,
+      "earliest_day": 9,
+      "max_wait_days": 25
+    },
+    {
+      "id": 151,
+      "type": "elective_cs",
+      "specialty": "obs_gynae",
+      "duration_hr": 1.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [],
+      "priority": 3,
+      "earliest_day": 14,
+      "max_wait_days": 15
+    },
+    {
+      "id": 152,
+      "type": "lumbar_disc",
+      "specialty": "neurosurgery",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [
+        "neurology_microscope"
+      ],
+      "priority": 1,
+      "earliest_day": 11,
+      "max_wait_days": 40
+    },
+    {
+      "id": 153,
+      "type": "hysterectomy",
+      "specialty": "obs_gynae",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 5,
+      "earliest_day": 52,
+      "max_wait_days": 4
+    },
+    {
+      "id": 154,
+      "type": "valve_replacement",
+      "specialty": "cardiothoracic",
+      "duration_hr": 4.0,
+      "icu_days": 2,
+      "ward_days": 6,
+      "required_equipment": [
+        "perfusion_machine"
+      ],
+      "priority": 4,
+      "earliest_day": 31,
+      "max_wait_days": 18
+    },
+    {
+      "id": 155,
+      "type": "colectomy",
+      "specialty": "general_surgery",
+      "duration_hr": 3.5,
+      "icu_days": 1,
+      "ward_days": 5,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 3,
+      "earliest_day": 37,
+      "max_wait_days": 14
+    },
+    {
+      "id": 156,
+      "type": "hernia_repair",
+      "specialty": "general_surgery",
+      "duration_hr": 1.0,
+      "icu_days": 0,
+      "ward_days": 1,
+      "required_equipment": [],
+      "priority": 4,
+      "earliest_day": 6,
+      "max_wait_days": 9
+    },
+    {
+      "id": 157,
+      "type": "lumbar_disc",
+      "specialty": "neurosurgery",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [
+        "neurology_microscope"
+      ],
+      "priority": 5,
+      "earliest_day": 8,
+      "max_wait_days": 7
+    },
+    {
+      "id": 158,
+      "type": "hernia_repair",
+      "specialty": "general_surgery",
+      "duration_hr": 1.0,
+      "icu_days": 0,
+      "ward_days": 1,
+      "required_equipment": [],
+      "priority": 2,
+      "earliest_day": 14,
+      "max_wait_days": 22
+    },
+    {
+      "id": 159,
+      "type": "spinal_fusion",
+      "specialty": "orthopaedics",
+      "duration_hr": 4.0,
+      "icu_days": 1,
+      "ward_days": 5,
+      "required_equipment": [
+        "c_arm",
+        "neurology_microscope"
+      ],
+      "priority": 3,
+      "earliest_day": 39,
+      "max_wait_days": 17
+    },
+    {
+      "id": 160,
+      "type": "elective_cs",
+      "specialty": "obs_gynae",
+      "duration_hr": 1.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [],
+      "priority": 4,
+      "earliest_day": 29,
+      "max_wait_days": 12
+    },
+    {
+      "id": 161,
+      "type": "spinal_fusion",
+      "specialty": "orthopaedics",
+      "duration_hr": 4.0,
+      "icu_days": 1,
+      "ward_days": 5,
+      "required_equipment": [
+        "c_arm",
+        "neurology_microscope"
+      ],
+      "priority": 1,
+      "earliest_day": 2,
+      "max_wait_days": 47
+    },
+    {
+      "id": 162,
+      "type": "cabg",
+      "specialty": "cardiothoracic",
+      "duration_hr": 4.5,
+      "icu_days": 2,
+      "ward_days": 6,
+      "required_equipment": [
+        "perfusion_machine"
+      ],
+      "priority": 2,
+      "earliest_day": 9,
+      "max_wait_days": 27
+    },
+    {
+      "id": 163,
+      "type": "hernia_repair",
+      "specialty": "general_surgery",
+      "duration_hr": 1.0,
+      "icu_days": 0,
+      "ward_days": 1,
+      "required_equipment": [],
+      "priority": 1,
+      "earliest_day": 6,
+      "max_wait_days": 41
+    },
+    {
+      "id": 164,
+      "type": "knee_replacement",
+      "specialty": "orthopaedics",
+      "duration_hr": 2.0,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [
+        "c_arm"
+      ],
+      "priority": 3,
+      "earliest_day": 21,
+      "max_wait_days": 23
+    },
+    {
+      "id": 165,
+      "type": "hernia_repair",
+      "specialty": "general_surgery",
+      "duration_hr": 1.0,
+      "icu_days": 0,
+      "ward_days": 1,
+      "required_equipment": [],
+      "priority": 3,
+      "earliest_day": 5,
+      "max_wait_days": 16
+    },
+    {
+      "id": 166,
+      "type": "hysterectomy",
+      "specialty": "obs_gynae",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 5,
+      "earliest_day": 15,
+      "max_wait_days": 6
+    },
+    {
+      "id": 167,
+      "type": "hernia_repair",
+      "specialty": "general_surgery",
+      "duration_hr": 1.0,
+      "icu_days": 0,
+      "ward_days": 1,
+      "required_equipment": [],
+      "priority": 2,
+      "earliest_day": 49,
+      "max_wait_days": 7
+    },
+    {
+      "id": 168,
+      "type": "elective_cs",
+      "specialty": "obs_gynae",
+      "duration_hr": 1.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [],
+      "priority": 5,
+      "earliest_day": 7,
+      "max_wait_days": 9
+    },
+    {
+      "id": 169,
+      "type": "hysterectomy",
+      "specialty": "obs_gynae",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 2,
+      "earliest_day": 24,
+      "max_wait_days": 31
+    },
+    {
+      "id": 170,
+      "type": "hip_replacement",
+      "specialty": "orthopaedics",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 4,
+      "required_equipment": [
+        "c_arm"
+      ],
+      "priority": 2,
+      "earliest_day": 42,
+      "max_wait_days": 14
+    },
+    {
+      "id": 171,
+      "type": "lap_chole",
+      "specialty": "general_surgery",
+      "duration_hr": 1.5,
+      "icu_days": 0,
+      "ward_days": 2,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 2,
+      "earliest_day": 29,
+      "max_wait_days": 24
+    },
+    {
+      "id": 172,
+      "type": "valve_replacement",
+      "specialty": "cardiothoracic",
+      "duration_hr": 4.0,
+      "icu_days": 2,
+      "ward_days": 6,
+      "required_equipment": [
+        "perfusion_machine"
+      ],
+      "priority": 5,
+      "earliest_day": 32,
+      "max_wait_days": 7
+    },
+    {
+      "id": 173,
+      "type": "cabg",
+      "specialty": "cardiothoracic",
+      "duration_hr": 4.5,
+      "icu_days": 2,
+      "ward_days": 6,
+      "required_equipment": [
+        "perfusion_machine"
+      ],
+      "priority": 4,
+      "earliest_day": 39,
+      "max_wait_days": 15
+    },
+    {
+      "id": 174,
+      "type": "hip_replacement",
+      "specialty": "orthopaedics",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 4,
+      "required_equipment": [
+        "c_arm"
+      ],
+      "priority": 4,
+      "earliest_day": 28,
+      "max_wait_days": 17
+    },
+    {
+      "id": 175,
+      "type": "valve_replacement",
+      "specialty": "cardiothoracic",
+      "duration_hr": 4.0,
+      "icu_days": 2,
+      "ward_days": 6,
+      "required_equipment": [
+        "perfusion_machine"
+      ],
+      "priority": 2,
+      "earliest_day": 18,
+      "max_wait_days": 35
+    },
+    {
+      "id": 176,
+      "type": "hysterectomy",
+      "specialty": "obs_gynae",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 5,
+      "earliest_day": 19,
+      "max_wait_days": 12
+    },
+    {
+      "id": 177,
+      "type": "hernia_repair",
+      "specialty": "general_surgery",
+      "duration_hr": 1.0,
+      "icu_days": 0,
+      "ward_days": 1,
+      "required_equipment": [],
+      "priority": 2,
+      "earliest_day": 52,
+      "max_wait_days": 4
+    },
+    {
+      "id": 178,
+      "type": "knee_replacement",
+      "specialty": "orthopaedics",
+      "duration_hr": 2.0,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [
+        "c_arm"
+      ],
+      "priority": 4,
+      "earliest_day": 38,
+      "max_wait_days": 16
+    },
+    {
+      "id": 179,
+      "type": "hernia_repair",
+      "specialty": "general_surgery",
+      "duration_hr": 1.0,
+      "icu_days": 0,
+      "ward_days": 1,
+      "required_equipment": [],
+      "priority": 5,
+      "earliest_day": 38,
+      "max_wait_days": 7
+    },
+    {
+      "id": 180,
+      "type": "spinal_fusion",
+      "specialty": "orthopaedics",
+      "duration_hr": 4.0,
+      "icu_days": 1,
+      "ward_days": 5,
+      "required_equipment": [
+        "c_arm",
+        "neurology_microscope"
+      ],
+      "priority": 3,
+      "earliest_day": 26,
+      "max_wait_days": 24
+    },
+    {
+      "id": 181,
+      "type": "hip_replacement",
+      "specialty": "orthopaedics",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 4,
+      "required_equipment": [
+        "c_arm"
+      ],
+      "priority": 3,
+      "earliest_day": 5,
+      "max_wait_days": 16
+    },
+    {
+      "id": 182,
+      "type": "cabg",
+      "specialty": "cardiothoracic",
+      "duration_hr": 4.5,
+      "icu_days": 2,
+      "ward_days": 6,
+      "required_equipment": [
+        "perfusion_machine"
+      ],
+      "priority": 4,
+      "earliest_day": 40,
+      "max_wait_days": 11
+    },
+    {
+      "id": 183,
+      "type": "hernia_repair",
+      "specialty": "general_surgery",
+      "duration_hr": 1.0,
+      "icu_days": 0,
+      "ward_days": 1,
+      "required_equipment": [],
+      "priority": 3,
+      "earliest_day": 26,
+      "max_wait_days": 25
+    },
+    {
+      "id": 184,
+      "type": "knee_replacement",
+      "specialty": "orthopaedics",
+      "duration_hr": 2.0,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [
+        "c_arm"
+      ],
+      "priority": 4,
+      "earliest_day": 20,
+      "max_wait_days": 11
+    },
+    {
+      "id": 185,
+      "type": "hip_replacement",
+      "specialty": "orthopaedics",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 4,
+      "required_equipment": [
+        "c_arm"
+      ],
+      "priority": 5,
+      "earliest_day": 41,
+      "max_wait_days": 14
+    },
+    {
+      "id": 186,
+      "type": "valve_replacement",
+      "specialty": "cardiothoracic",
+      "duration_hr": 4.0,
+      "icu_days": 2,
+      "ward_days": 6,
+      "required_equipment": [
+        "perfusion_machine"
+      ],
+      "priority": 5,
+      "earliest_day": 38,
+      "max_wait_days": 10
+    },
+    {
+      "id": 187,
+      "type": "lap_chole",
+      "specialty": "general_surgery",
+      "duration_hr": 1.5,
+      "icu_days": 0,
+      "ward_days": 2,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 3,
+      "earliest_day": 7,
+      "max_wait_days": 16
+    },
+    {
+      "id": 188,
+      "type": "craniotomy",
+      "specialty": "neurosurgery",
+      "duration_hr": 5.0,
+      "icu_days": 2,
+      "ward_days": 7,
+      "required_equipment": [
+        "neurology_microscope"
+      ],
+      "priority": 2,
+      "earliest_day": 28,
+      "max_wait_days": 23
+    },
+    {
+      "id": 189,
+      "type": "hysterectomy",
+      "specialty": "obs_gynae",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 2,
+      "earliest_day": 46,
+      "max_wait_days": 10
+    },
+    {
+      "id": 190,
+      "type": "elective_cs",
+      "specialty": "obs_gynae",
+      "duration_hr": 1.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [],
+      "priority": 2,
+      "earliest_day": 3,
+      "max_wait_days": 27
+    },
+    {
+      "id": 191,
+      "type": "knee_replacement",
+      "specialty": "orthopaedics",
+      "duration_hr": 2.0,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [
+        "c_arm"
+      ],
+      "priority": 5,
+      "earliest_day": 1,
+      "max_wait_days": 8
+    },
+    {
+      "id": 192,
+      "type": "valve_replacement",
+      "specialty": "cardiothoracic",
+      "duration_hr": 4.0,
+      "icu_days": 2,
+      "ward_days": 6,
+      "required_equipment": [
+        "perfusion_machine"
+      ],
+      "priority": 5,
+      "earliest_day": 8,
+      "max_wait_days": 14
+    },
+    {
+      "id": 193,
+      "type": "craniotomy",
+      "specialty": "neurosurgery",
+      "duration_hr": 5.0,
+      "icu_days": 2,
+      "ward_days": 7,
+      "required_equipment": [
+        "neurology_microscope"
+      ],
+      "priority": 3,
+      "earliest_day": 10,
+      "max_wait_days": 22
+    },
+    {
+      "id": 194,
+      "type": "lumbar_disc",
+      "specialty": "neurosurgery",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [
+        "neurology_microscope"
+      ],
+      "priority": 4,
+      "earliest_day": 45,
+      "max_wait_days": 11
+    },
+    {
+      "id": 195,
+      "type": "hysterectomy",
+      "specialty": "obs_gynae",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 3,
+      "earliest_day": 9,
+      "max_wait_days": 17
+    },
+    {
+      "id": 196,
+      "type": "spinal_fusion",
+      "specialty": "orthopaedics",
+      "duration_hr": 4.0,
+      "icu_days": 1,
+      "ward_days": 5,
+      "required_equipment": [
+        "c_arm",
+        "neurology_microscope"
+      ],
+      "priority": 3,
+      "earliest_day": 9,
+      "max_wait_days": 27
+    },
+    {
+      "id": 197,
+      "type": "hip_replacement",
+      "specialty": "orthopaedics",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 4,
+      "required_equipment": [
+        "c_arm"
+      ],
+      "priority": 3,
+      "earliest_day": 13,
+      "max_wait_days": 25
+    },
+    {
+      "id": 198,
+      "type": "hip_replacement",
+      "specialty": "orthopaedics",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 4,
+      "required_equipment": [
+        "c_arm"
+      ],
+      "priority": 3,
+      "earliest_day": 35,
+      "max_wait_days": 21
+    },
+    {
+      "id": 199,
+      "type": "cabg",
+      "specialty": "cardiothoracic",
+      "duration_hr": 4.5,
+      "icu_days": 2,
+      "ward_days": 6,
+      "required_equipment": [
+        "perfusion_machine"
+      ],
+      "priority": 3,
+      "earliest_day": 13,
+      "max_wait_days": 19
+    },
+    {
+      "id": 200,
+      "type": "hip_replacement",
+      "specialty": "orthopaedics",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 4,
+      "required_equipment": [
+        "c_arm"
+      ],
+      "priority": 2,
+      "earliest_day": 42,
+      "max_wait_days": 14
+    },
+    {
+      "id": 201,
+      "type": "hip_replacement",
+      "specialty": "orthopaedics",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 4,
+      "required_equipment": [
+        "c_arm"
+      ],
+      "priority": 3,
+      "earliest_day": 13,
+      "max_wait_days": 23
+    },
+    {
+      "id": 202,
+      "type": "valve_replacement",
+      "specialty": "cardiothoracic",
+      "duration_hr": 4.0,
+      "icu_days": 2,
+      "ward_days": 6,
+      "required_equipment": [
+        "perfusion_machine"
+      ],
+      "priority": 5,
+      "earliest_day": 16,
+      "max_wait_days": 12
+    },
+    {
+      "id": 203,
+      "type": "craniotomy",
+      "specialty": "neurosurgery",
+      "duration_hr": 5.0,
+      "icu_days": 2,
+      "ward_days": 7,
+      "required_equipment": [
+        "neurology_microscope"
+      ],
+      "priority": 2,
+      "earliest_day": 28,
+      "max_wait_days": 28
+    },
+    {
+      "id": 204,
+      "type": "hip_replacement",
+      "specialty": "orthopaedics",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 4,
+      "required_equipment": [
+        "c_arm"
+      ],
+      "priority": 3,
+      "earliest_day": 9,
+      "max_wait_days": 21
+    },
+    {
+      "id": 205,
+      "type": "elective_cs",
+      "specialty": "obs_gynae",
+      "duration_hr": 1.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [],
+      "priority": 3,
+      "earliest_day": 29,
+      "max_wait_days": 16
+    },
+    {
+      "id": 206,
+      "type": "craniotomy",
+      "specialty": "neurosurgery",
+      "duration_hr": 5.0,
+      "icu_days": 2,
+      "ward_days": 7,
+      "required_equipment": [
+        "neurology_microscope"
+      ],
+      "priority": 4,
+      "earliest_day": 29,
+      "max_wait_days": 18
+    },
+    {
+      "id": 207,
+      "type": "craniotomy",
+      "specialty": "neurosurgery",
+      "duration_hr": 5.0,
+      "icu_days": 2,
+      "ward_days": 7,
+      "required_equipment": [
+        "neurology_microscope"
+      ],
+      "priority": 2,
+      "earliest_day": 10,
+      "max_wait_days": 30
+    },
+    {
+      "id": 208,
+      "type": "knee_replacement",
+      "specialty": "orthopaedics",
+      "duration_hr": 2.0,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [
+        "c_arm"
+      ],
+      "priority": 5,
+      "earliest_day": 4,
+      "max_wait_days": 9
+    },
+    {
+      "id": 209,
+      "type": "colectomy",
+      "specialty": "general_surgery",
+      "duration_hr": 3.5,
+      "icu_days": 1,
+      "ward_days": 5,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 3,
+      "earliest_day": 35,
+      "max_wait_days": 21
+    },
+    {
+      "id": 210,
+      "type": "elective_cs",
+      "specialty": "obs_gynae",
+      "duration_hr": 1.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [],
+      "priority": 1,
+      "earliest_day": 44,
+      "max_wait_days": 12
+    },
+    {
+      "id": 211,
+      "type": "lap_chole",
+      "specialty": "general_surgery",
+      "duration_hr": 1.5,
+      "icu_days": 0,
+      "ward_days": 2,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 2,
+      "earliest_day": 12,
+      "max_wait_days": 36
+    },
+    {
+      "id": 212,
+      "type": "hip_replacement",
+      "specialty": "orthopaedics",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 4,
+      "required_equipment": [
+        "c_arm"
+      ],
+      "priority": 3,
+      "earliest_day": 12,
+      "max_wait_days": 24
+    },
+    {
+      "id": 213,
+      "type": "cabg",
+      "specialty": "cardiothoracic",
+      "duration_hr": 4.5,
+      "icu_days": 2,
+      "ward_days": 6,
+      "required_equipment": [
+        "perfusion_machine"
+      ],
+      "priority": 3,
+      "earliest_day": 43,
+      "max_wait_days": 13
+    },
+    {
+      "id": 214,
+      "type": "spinal_fusion",
+      "specialty": "orthopaedics",
+      "duration_hr": 4.0,
+      "icu_days": 1,
+      "ward_days": 5,
+      "required_equipment": [
+        "c_arm",
+        "neurology_microscope"
+      ],
+      "priority": 4,
+      "earliest_day": 17,
+      "max_wait_days": 18
+    },
+    {
+      "id": 215,
+      "type": "cabg",
+      "specialty": "cardiothoracic",
+      "duration_hr": 4.5,
+      "icu_days": 2,
+      "ward_days": 6,
+      "required_equipment": [
+        "perfusion_machine"
+      ],
+      "priority": 2,
+      "earliest_day": 35,
+      "max_wait_days": 21
+    },
+    {
+      "id": 216,
+      "type": "colectomy",
+      "specialty": "general_surgery",
+      "duration_hr": 3.5,
+      "icu_days": 1,
+      "ward_days": 5,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 2,
+      "earliest_day": 17,
+      "max_wait_days": 37
+    },
+    {
+      "id": 217,
+      "type": "lumbar_disc",
+      "specialty": "neurosurgery",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [
+        "neurology_microscope"
+      ],
+      "priority": 5,
+      "earliest_day": 50,
+      "max_wait_days": 6
+    },
+    {
+      "id": 218,
+      "type": "craniotomy",
+      "specialty": "neurosurgery",
+      "duration_hr": 5.0,
+      "icu_days": 2,
+      "ward_days": 7,
+      "required_equipment": [
+        "neurology_microscope"
+      ],
+      "priority": 3,
+      "earliest_day": 49,
+      "max_wait_days": 7
+    },
+    {
+      "id": 219,
+      "type": "elective_cs",
+      "specialty": "obs_gynae",
+      "duration_hr": 1.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [],
+      "priority": 4,
+      "earliest_day": 18,
+      "max_wait_days": 17
+    },
+    {
+      "id": 220,
+      "type": "hernia_repair",
+      "specialty": "general_surgery",
+      "duration_hr": 1.0,
+      "icu_days": 0,
+      "ward_days": 1,
+      "required_equipment": [],
+      "priority": 2,
+      "earliest_day": 47,
+      "max_wait_days": 9
+    },
+    {
+      "id": 221,
+      "type": "colectomy",
+      "specialty": "general_surgery",
+      "duration_hr": 3.5,
+      "icu_days": 1,
+      "ward_days": 5,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 4,
+      "earliest_day": 18,
+      "max_wait_days": 15
+    },
+    {
+      "id": 222,
+      "type": "craniotomy",
+      "specialty": "neurosurgery",
+      "duration_hr": 5.0,
+      "icu_days": 2,
+      "ward_days": 7,
+      "required_equipment": [
+        "neurology_microscope"
+      ],
+      "priority": 3,
+      "earliest_day": 29,
+      "max_wait_days": 26
+    },
+    {
+      "id": 223,
+      "type": "hysterectomy",
+      "specialty": "obs_gynae",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 5,
+      "earliest_day": 52,
+      "max_wait_days": 4
+    },
+    {
+      "id": 224,
+      "type": "hysterectomy",
+      "specialty": "obs_gynae",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 4,
+      "earliest_day": 6,
+      "max_wait_days": 18
+    },
+    {
+      "id": 225,
+      "type": "valve_replacement",
+      "specialty": "cardiothoracic",
+      "duration_hr": 4.0,
+      "icu_days": 2,
+      "ward_days": 6,
+      "required_equipment": [
+        "perfusion_machine"
+      ],
+      "priority": 1,
+      "earliest_day": 30,
+      "max_wait_days": 26
+    },
+    {
+      "id": 226,
+      "type": "valve_replacement",
+      "specialty": "cardiothoracic",
+      "duration_hr": 4.0,
+      "icu_days": 2,
+      "ward_days": 6,
+      "required_equipment": [
+        "perfusion_machine"
+      ],
+      "priority": 4,
+      "earliest_day": 10,
+      "max_wait_days": 15
+    },
+    {
+      "id": 227,
+      "type": "cabg",
+      "specialty": "cardiothoracic",
+      "duration_hr": 4.5,
+      "icu_days": 2,
+      "ward_days": 6,
+      "required_equipment": [
+        "perfusion_machine"
+      ],
+      "priority": 4,
+      "earliest_day": 4,
+      "max_wait_days": 14
+    },
+    {
+      "id": 228,
+      "type": "hip_replacement",
+      "specialty": "orthopaedics",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 4,
+      "required_equipment": [
+        "c_arm"
+      ],
+      "priority": 3,
+      "earliest_day": 1,
+      "max_wait_days": 14
+    },
+    {
+      "id": 229,
+      "type": "spinal_fusion",
+      "specialty": "orthopaedics",
+      "duration_hr": 4.0,
+      "icu_days": 1,
+      "ward_days": 5,
+      "required_equipment": [
+        "c_arm",
+        "neurology_microscope"
+      ],
+      "priority": 3,
+      "earliest_day": 24,
+      "max_wait_days": 16
+    },
+    {
+      "id": 230,
+      "type": "elective_cs",
+      "specialty": "obs_gynae",
+      "duration_hr": 1.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [],
+      "priority": 4,
+      "earliest_day": 8,
+      "max_wait_days": 19
+    },
+    {
+      "id": 231,
+      "type": "valve_replacement",
+      "specialty": "cardiothoracic",
+      "duration_hr": 4.0,
+      "icu_days": 2,
+      "ward_days": 6,
+      "required_equipment": [
+        "perfusion_machine"
+      ],
+      "priority": 3,
+      "earliest_day": 5,
+      "max_wait_days": 18
+    },
+    {
+      "id": 232,
+      "type": "elective_cs",
+      "specialty": "obs_gynae",
+      "duration_hr": 1.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [],
+      "priority": 3,
+      "earliest_day": 51,
+      "max_wait_days": 5
+    },
+    {
+      "id": 233,
+      "type": "hernia_repair",
+      "specialty": "general_surgery",
+      "duration_hr": 1.0,
+      "icu_days": 0,
+      "ward_days": 1,
+      "required_equipment": [],
+      "priority": 3,
+      "earliest_day": 34,
+      "max_wait_days": 22
+    },
+    {
+      "id": 234,
+      "type": "hernia_repair",
+      "specialty": "general_surgery",
+      "duration_hr": 1.0,
+      "icu_days": 0,
+      "ward_days": 1,
+      "required_equipment": [],
+      "priority": 4,
+      "earliest_day": 46,
+      "max_wait_days": 10
+    },
+    {
+      "id": 235,
+      "type": "hernia_repair",
+      "specialty": "general_surgery",
+      "duration_hr": 1.0,
+      "icu_days": 0,
+      "ward_days": 1,
+      "required_equipment": [],
+      "priority": 3,
+      "earliest_day": 38,
+      "max_wait_days": 18
+    },
+    {
+      "id": 236,
+      "type": "spinal_fusion",
+      "specialty": "orthopaedics",
+      "duration_hr": 4.0,
+      "icu_days": 1,
+      "ward_days": 5,
+      "required_equipment": [
+        "c_arm",
+        "neurology_microscope"
+      ],
+      "priority": 2,
+      "earliest_day": 51,
+      "max_wait_days": 5
+    },
+    {
+      "id": 237,
+      "type": "valve_replacement",
+      "specialty": "cardiothoracic",
+      "duration_hr": 4.0,
+      "icu_days": 2,
+      "ward_days": 6,
+      "required_equipment": [
+        "perfusion_machine"
+      ],
+      "priority": 3,
+      "earliest_day": 8,
+      "max_wait_days": 19
+    },
+    {
+      "id": 238,
+      "type": "lap_chole",
+      "specialty": "general_surgery",
+      "duration_hr": 1.5,
+      "icu_days": 0,
+      "ward_days": 2,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 4,
+      "earliest_day": 21,
+      "max_wait_days": 9
+    },
+    {
+      "id": 239,
+      "type": "elective_cs",
+      "specialty": "obs_gynae",
+      "duration_hr": 1.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [],
+      "priority": 3,
+      "earliest_day": 53,
+      "max_wait_days": 3
+    },
+    {
+      "id": 240,
+      "type": "lap_chole",
+      "specialty": "general_surgery",
+      "duration_hr": 1.5,
+      "icu_days": 0,
+      "ward_days": 2,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 2,
+      "earliest_day": 37,
+      "max_wait_days": 19
+    },
+    {
+      "id": 241,
+      "type": "elective_cs",
+      "specialty": "obs_gynae",
+      "duration_hr": 1.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [],
+      "priority": 4,
+      "earliest_day": 12,
+      "max_wait_days": 19
+    },
+    {
+      "id": 242,
+      "type": "elective_cs",
+      "specialty": "obs_gynae",
+      "duration_hr": 1.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [],
+      "priority": 4,
+      "earliest_day": 7,
+      "max_wait_days": 11
+    },
+    {
+      "id": 243,
+      "type": "spinal_fusion",
+      "specialty": "orthopaedics",
+      "duration_hr": 4.0,
+      "icu_days": 1,
+      "ward_days": 5,
+      "required_equipment": [
+        "c_arm",
+        "neurology_microscope"
+      ],
+      "priority": 2,
+      "earliest_day": 37,
+      "max_wait_days": 19
+    },
+    {
+      "id": 244,
+      "type": "valve_replacement",
+      "specialty": "cardiothoracic",
+      "duration_hr": 4.0,
+      "icu_days": 2,
+      "ward_days": 6,
+      "required_equipment": [
+        "perfusion_machine"
+      ],
+      "priority": 4,
+      "earliest_day": 41,
+      "max_wait_days": 14
+    },
+    {
+      "id": 245,
+      "type": "spinal_fusion",
+      "specialty": "orthopaedics",
+      "duration_hr": 4.0,
+      "icu_days": 1,
+      "ward_days": 5,
+      "required_equipment": [
+        "c_arm",
+        "neurology_microscope"
+      ],
+      "priority": 2,
+      "earliest_day": 6,
+      "max_wait_days": 30
+    },
+    {
+      "id": 246,
+      "type": "lap_chole",
+      "specialty": "general_surgery",
+      "duration_hr": 1.5,
+      "icu_days": 0,
+      "ward_days": 2,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 4,
+      "earliest_day": 35,
+      "max_wait_days": 16
+    },
+    {
+      "id": 247,
+      "type": "spinal_fusion",
+      "specialty": "orthopaedics",
+      "duration_hr": 4.0,
+      "icu_days": 1,
+      "ward_days": 5,
+      "required_equipment": [
+        "c_arm",
+        "neurology_microscope"
+      ],
+      "priority": 5,
+      "earliest_day": 27,
+      "max_wait_days": 7
+    },
+    {
+      "id": 248,
+      "type": "craniotomy",
+      "specialty": "neurosurgery",
+      "duration_hr": 5.0,
+      "icu_days": 2,
+      "ward_days": 7,
+      "required_equipment": [
+        "neurology_microscope"
+      ],
+      "priority": 5,
+      "earliest_day": 17,
+      "max_wait_days": 12
+    },
+    {
+      "id": 249,
+      "type": "craniotomy",
+      "specialty": "neurosurgery",
+      "duration_hr": 5.0,
+      "icu_days": 2,
+      "ward_days": 7,
+      "required_equipment": [
+        "neurology_microscope"
+      ],
+      "priority": 3,
+      "earliest_day": 48,
+      "max_wait_days": 8
+    },
+    {
+      "id": 250,
+      "type": "hysterectomy",
+      "specialty": "obs_gynae",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 4,
+      "earliest_day": 17,
+      "max_wait_days": 17
+    },
+    {
+      "id": 251,
+      "type": "lap_chole",
+      "specialty": "general_surgery",
+      "duration_hr": 1.5,
+      "icu_days": 0,
+      "ward_days": 2,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 3,
+      "earliest_day": 38,
+      "max_wait_days": 18
+    },
+    {
+      "id": 252,
+      "type": "lap_chole",
+      "specialty": "general_surgery",
+      "duration_hr": 1.5,
+      "icu_days": 0,
+      "ward_days": 2,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 3,
+      "earliest_day": 28,
+      "max_wait_days": 28
+    },
+    {
+      "id": 253,
+      "type": "hysterectomy",
+      "specialty": "obs_gynae",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 3,
+      "earliest_day": 5,
+      "max_wait_days": 25
+    },
+    {
+      "id": 254,
+      "type": "elective_cs",
+      "specialty": "obs_gynae",
+      "duration_hr": 1.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [],
+      "priority": 5,
+      "earliest_day": 30,
+      "max_wait_days": 10
+    },
+    {
+      "id": 255,
+      "type": "cabg",
+      "specialty": "cardiothoracic",
+      "duration_hr": 4.5,
+      "icu_days": 2,
+      "ward_days": 6,
+      "required_equipment": [
+        "perfusion_machine"
+      ],
+      "priority": 2,
+      "earliest_day": 11,
+      "max_wait_days": 26
+    },
+    {
+      "id": 256,
+      "type": "craniotomy",
+      "specialty": "neurosurgery",
+      "duration_hr": 5.0,
+      "icu_days": 2,
+      "ward_days": 7,
+      "required_equipment": [
+        "neurology_microscope"
+      ],
+      "priority": 2,
+      "earliest_day": 52,
+      "max_wait_days": 4
+    },
+    {
+      "id": 257,
+      "type": "cabg",
+      "specialty": "cardiothoracic",
+      "duration_hr": 4.5,
+      "icu_days": 2,
+      "ward_days": 6,
+      "required_equipment": [
+        "perfusion_machine"
+      ],
+      "priority": 5,
+      "earliest_day": 38,
+      "max_wait_days": 10
+    },
+    {
+      "id": 258,
+      "type": "cabg",
+      "specialty": "cardiothoracic",
+      "duration_hr": 4.5,
+      "icu_days": 2,
+      "ward_days": 6,
+      "required_equipment": [
+        "perfusion_machine"
+      ],
+      "priority": 4,
+      "earliest_day": 47,
+      "max_wait_days": 9
+    },
+    {
+      "id": 259,
+      "type": "hysterectomy",
+      "specialty": "obs_gynae",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 2,
+      "earliest_day": 38,
+      "max_wait_days": 18
+    },
+    {
+      "id": 260,
+      "type": "elective_cs",
+      "specialty": "obs_gynae",
+      "duration_hr": 1.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [],
+      "priority": 1,
+      "earliest_day": 7,
+      "max_wait_days": 45
+    },
+    {
+      "id": 261,
+      "type": "craniotomy",
+      "specialty": "neurosurgery",
+      "duration_hr": 5.0,
+      "icu_days": 2,
+      "ward_days": 7,
+      "required_equipment": [
+        "neurology_microscope"
+      ],
+      "priority": 2,
+      "earliest_day": 14,
+      "max_wait_days": 33
+    },
+    {
+      "id": 262,
+      "type": "hip_replacement",
+      "specialty": "orthopaedics",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 4,
+      "required_equipment": [
+        "c_arm"
+      ],
+      "priority": 4,
+      "earliest_day": 1,
+      "max_wait_days": 14
+    },
+    {
+      "id": 263,
+      "type": "valve_replacement",
+      "specialty": "cardiothoracic",
+      "duration_hr": 4.0,
+      "icu_days": 2,
+      "ward_days": 6,
+      "required_equipment": [
+        "perfusion_machine"
+      ],
+      "priority": 5,
+      "earliest_day": 7,
+      "max_wait_days": 9
+    },
+    {
+      "id": 264,
+      "type": "craniotomy",
+      "specialty": "neurosurgery",
+      "duration_hr": 5.0,
+      "icu_days": 2,
+      "ward_days": 7,
+      "required_equipment": [
+        "neurology_microscope"
+      ],
+      "priority": 4,
+      "earliest_day": 52,
+      "max_wait_days": 4
+    },
+    {
+      "id": 265,
+      "type": "hip_replacement",
+      "specialty": "orthopaedics",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 4,
+      "required_equipment": [
+        "c_arm"
+      ],
+      "priority": 2,
+      "earliest_day": 16,
+      "max_wait_days": 31
+    },
+    {
+      "id": 266,
+      "type": "spinal_fusion",
+      "specialty": "orthopaedics",
+      "duration_hr": 4.0,
+      "icu_days": 1,
+      "ward_days": 5,
+      "required_equipment": [
+        "c_arm",
+        "neurology_microscope"
+      ],
+      "priority": 2,
+      "earliest_day": 43,
+      "max_wait_days": 13
+    },
+    {
+      "id": 267,
+      "type": "craniotomy",
+      "specialty": "neurosurgery",
+      "duration_hr": 5.0,
+      "icu_days": 2,
+      "ward_days": 7,
+      "required_equipment": [
+        "neurology_microscope"
+      ],
+      "priority": 2,
+      "earliest_day": 44,
+      "max_wait_days": 12
+    },
+    {
+      "id": 268,
+      "type": "hysterectomy",
+      "specialty": "obs_gynae",
+      "duration_hr": 2.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 3,
+      "earliest_day": 47,
+      "max_wait_days": 9
+    },
+    {
+      "id": 269,
+      "type": "valve_replacement",
+      "specialty": "cardiothoracic",
+      "duration_hr": 4.0,
+      "icu_days": 2,
+      "ward_days": 6,
+      "required_equipment": [
+        "perfusion_machine"
+      ],
+      "priority": 2,
+      "earliest_day": 25,
+      "max_wait_days": 29
+    },
+    {
+      "id": 270,
+      "type": "elective_cs",
+      "specialty": "obs_gynae",
+      "duration_hr": 1.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [],
+      "priority": 1,
+      "earliest_day": 35,
+      "max_wait_days": 21
+    },
+    {
+      "id": 271,
+      "type": "cabg",
+      "specialty": "cardiothoracic",
+      "duration_hr": 4.5,
+      "icu_days": 2,
+      "ward_days": 6,
+      "required_equipment": [
+        "perfusion_machine"
+      ],
+      "priority": 5,
+      "earliest_day": 15,
+      "max_wait_days": 7
+    },
+    {
+      "id": 272,
+      "type": "hernia_repair",
+      "specialty": "general_surgery",
+      "duration_hr": 1.0,
+      "icu_days": 0,
+      "ward_days": 1,
+      "required_equipment": [],
+      "priority": 3,
+      "earliest_day": 39,
+      "max_wait_days": 17
+    },
+    {
+      "id": 273,
+      "type": "elective_cs",
+      "specialty": "obs_gynae",
+      "duration_hr": 1.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [],
+      "priority": 2,
+      "earliest_day": 15,
+      "max_wait_days": 38
+    },
+    {
+      "id": 274,
+      "type": "cabg",
+      "specialty": "cardiothoracic",
+      "duration_hr": 4.5,
+      "icu_days": 2,
+      "ward_days": 6,
+      "required_equipment": [
+        "perfusion_machine"
+      ],
+      "priority": 5,
+      "earliest_day": 30,
+      "max_wait_days": 10
+    },
+    {
+      "id": 275,
+      "type": "knee_replacement",
+      "specialty": "orthopaedics",
+      "duration_hr": 2.0,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [
+        "c_arm"
+      ],
+      "priority": 1,
+      "earliest_day": 12,
+      "max_wait_days": 44
+    },
+    {
+      "id": 276,
+      "type": "cabg",
+      "specialty": "cardiothoracic",
+      "duration_hr": 4.5,
+      "icu_days": 2,
+      "ward_days": 6,
+      "required_equipment": [
+        "perfusion_machine"
+      ],
+      "priority": 5,
+      "earliest_day": 24,
+      "max_wait_days": 13
+    },
+    {
+      "id": 277,
+      "type": "craniotomy",
+      "specialty": "neurosurgery",
+      "duration_hr": 5.0,
+      "icu_days": 2,
+      "ward_days": 7,
+      "required_equipment": [
+        "neurology_microscope"
+      ],
+      "priority": 3,
+      "earliest_day": 39,
+      "max_wait_days": 17
+    },
+    {
+      "id": 278,
+      "type": "craniotomy",
+      "specialty": "neurosurgery",
+      "duration_hr": 5.0,
+      "icu_days": 2,
+      "ward_days": 7,
+      "required_equipment": [
+        "neurology_microscope"
+      ],
+      "priority": 4,
+      "earliest_day": 52,
+      "max_wait_days": 4
+    },
+    {
+      "id": 279,
+      "type": "elective_cs",
+      "specialty": "obs_gynae",
+      "duration_hr": 1.5,
+      "icu_days": 0,
+      "ward_days": 3,
+      "required_equipment": [],
+      "priority": 4,
+      "earliest_day": 40,
+      "max_wait_days": 12
+    },
+    {
+      "id": 280,
+      "type": "spinal_fusion",
+      "specialty": "orthopaedics",
+      "duration_hr": 4.0,
+      "icu_days": 1,
+      "ward_days": 5,
+      "required_equipment": [
+        "c_arm",
+        "neurology_microscope"
+      ],
+      "priority": 4,
+      "earliest_day": 20,
+      "max_wait_days": 20
+    }
+  ]
+}

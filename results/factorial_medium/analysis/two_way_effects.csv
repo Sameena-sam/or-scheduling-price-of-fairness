@@ -1,0 +1,5 @@
+metric,control_greedy,worst_cell,best_cell,eviction_effect_range,reinsertion_main_effect,interaction_range,residual_gap_best_cell_to_control,evict_priority_mean,evict_permutation_mean,evict_random_mean
+HV,1.94978e+08,6.4278e+07,1.52569e+08,8.73704e+07,874585,1.84081e+06,4.24096e+07,6.4278e+07,1.51648e+08,8.97894e+07
+IGD+,55.4511,446.219,991.329,527.845,-11.5097,27.8762,390.768,668.804,460.157,988.003
+spread,2575.18,1011.51,2226.28,1204.47,6.56895,60.8942,348.901,1011.51,2052.66,2215.99
+n_points,92.2,42.5667,87.0667,43.3167,-0.122222,2.36667,5.13333,53.1667,86.3833,43.0667

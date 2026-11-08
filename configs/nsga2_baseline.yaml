@@ -1,0 +1,19 @@
+# Baseline NSGA-II configuration.
+# Students should NOT modify this file; create a copy under a new name to
+# tune parameters or swap operators.
+
+name: nsga2_baseline
+algorithm: nsga2
+pop_size: 100
+n_generations: 100
+
+crossover: pmx
+crossover_prob: 0.9
+
+mutation: swap
+mutation_prob: 1.0
+
+initialiser: random_permutation
+
+# Required by the experimental protocol: at least 30 independent runs.
+n_runs: 30

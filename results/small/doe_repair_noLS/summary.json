@@ -1,0 +1,28 @@
+{
+  "config": {
+    "name": "doe_repair_noLS",
+    "algorithm": "nsga2",
+    "pop_size": 100,
+    "n_generations": 100,
+    "n_evaluations": 10000,
+    "crossover": "pmx",
+    "crossover_prob": 0.9,
+    "mutation": "swap",
+    "mutation_prob": 1.0,
+    "initialiser": "random_permutation",
+    "n_partitions": 13,
+    "n_runs": 30,
+    "seeds": null
+  },
+  "decoder": "repair",
+  "local_search": null,
+  "conflict_mode": null,
+  "eval_budget": 10000,
+  "ls_share": null,
+  "ls_budget_per_individual": null,
+  "instance_path": "instances\\ot_small.json",
+  "n_runs": 30,
+  "evaluations_mean": 10000.0,
+  "evaluations_max": 10000,
+  "completed_utc": "2026-07-30T07:55:59.467454+00:00"
+}

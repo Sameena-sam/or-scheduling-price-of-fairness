@@ -1,0 +1,7 @@
+{
+  "instance": "synth",
+  "decoder": "repair_perm",
+  "n_runs": 5,
+  "eval_budget": 2000,
+  "completed_utc": "2026-07-30T13:10:51.603046+00:00"
+}

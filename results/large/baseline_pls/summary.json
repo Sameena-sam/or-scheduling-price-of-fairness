@@ -1,0 +1,20 @@
+{
+  "config": {
+    "name": "pls_baseline",
+    "algorithm": "pls",
+    "pop_size": 100,
+    "n_generations": 100,
+    "n_evaluations": 10000,
+    "crossover": "pmx",
+    "crossover_prob": 0.9,
+    "mutation": "swap",
+    "mutation_prob": 1.0,
+    "initialiser": "random_permutation",
+    "n_partitions": 13,
+    "n_runs": 30,
+    "seeds": null
+  },
+  "instance_path": "instances\\ot_large.json",
+  "n_runs": 30,
+  "completed_utc": "2026-07-30T08:32:57.849263+00:00"
+}

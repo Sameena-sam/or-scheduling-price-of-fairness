@@ -1,0 +1,7 @@
+{
+  "instance": "j1010_10",
+  "decoder": "greedy",
+  "n_runs": 30,
+  "eval_budget": 10000,
+  "completed_utc": "2026-08-01T13:05:37.810959+00:00"
+}

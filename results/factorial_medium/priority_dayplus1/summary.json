@@ -1,0 +1,12 @@
+{
+  "config": {
+    "name": "priority_dayplus1",
+    "pop_size": 100,
+    "n_generations": 100,
+    "n_runs": 30
+  },
+  "instance_path": "instances\\ot_medium.json",
+  "n_runs": 30,
+  "eval_budget": 10000,
+  "completed_utc": "2026-07-30T11:10:44.718525+00:00"
+}

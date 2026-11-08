@@ -1,0 +1,17 @@
+# Baseline MOEA/D configuration with Tchebycheff decomposition.
+
+name: moead_baseline
+algorithm: moead
+pop_size: 105
+n_generations: 100
+n_partitions: 13       # with 3 objectives, gives 105 weight vectors
+
+crossover: pmx
+crossover_prob: 0.9
+
+mutation: swap
+mutation_prob: 1.0
+
+initialiser: random_permutation
+
+n_runs: 30

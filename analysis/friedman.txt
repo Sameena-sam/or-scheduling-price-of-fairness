@@ -1,0 +1,5 @@
+[hidden] HV: Friedman chi2=135.8857  p=1.339e-27  (k=6 configs, n=30 runs)
+    configurations (column order): baseline_nsga2, baseline_moead, baseline_pls, doe_repair_noLS, doe_greedy_LS, doe_repair_LS
+[hidden] IGD+: skipped (missing values)
+[hidden] spread: Friedman chi2=137.4667  p=6.181e-28  (k=6 configs, n=30 runs)
+    configurations (column order): baseline_nsga2, baseline_moead, baseline_pls, doe_repair_noLS, doe_greedy_LS, doe_repair_LS

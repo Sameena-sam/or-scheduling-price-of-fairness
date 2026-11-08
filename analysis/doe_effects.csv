@@ -1,0 +1,4 @@
+instance,indicator,mean_greedy_noLS,mean_repair_noLS,mean_greedy_LS,mean_repair_LS,main_effect_repair,main_effect_localsearch,interaction,better_is
+hidden,HV,2.53013e+08,8.33014e+07,2.33575e+08,7.94468e+07,-1.6192e+08,-1.16464e+07,7.79179e+06,higher
+hidden,IGD+,nan,nan,nan,nan,nan,nan,nan,lower
+hidden,spread,2649.82,4079.98,2650.75,3738.24,1258.82,-170.405,-171.333,higher

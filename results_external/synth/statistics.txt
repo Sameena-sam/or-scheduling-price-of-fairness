@@ -1,0 +1,10 @@
+[synth] decoders: greedy, repair, repair_perm
+  HV: Friedman chi2=10.0000 p=6.7379e-03
+    greedy vs repair       HV             A=1.0000 (large) Holm p=1.875e-01
+    greedy vs repair_perm  HV             A=0.0000 (large) Holm p=1.875e-01
+    repair vs repair_perm  HV             A=0.0000 (large) Holm p=1.875e-01
+  best_makespan: Friedman chi2=10.0000 p=6.7379e-03
+    greedy vs repair       best_makespan  A=0.0000 (large) Holm p=1.875e-01
+    greedy vs repair_perm  best_makespan  A=0.5000 (negligible) Holm p=1.000e+00
+    repair vs repair_perm  best_makespan  A=1.0000 (large) Holm p=1.875e-01
+  best makespan found = 16; no published value supplied (pass --best-known synth=<value>)

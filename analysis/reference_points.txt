@@ -1,0 +1,3 @@
+hidden: ref_point = [15902.5000, 2029.5500, 39.1412]
+    derived as componentwise worst observed objective value across all 6 configurations (180 runs), inflated by 10% of the observed range per objective.
+    reference front for IGD+: NOT FOUND

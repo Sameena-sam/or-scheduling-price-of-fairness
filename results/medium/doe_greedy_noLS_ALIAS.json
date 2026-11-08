@@ -1,0 +1,4 @@
+{
+  "note": "DoE cell (greedy decoder, no local search) == baseline_nsga2; identical configuration and seeds, not recomputed.",
+  "use_results_from": "results/medium/baseline_nsga2/"
+}

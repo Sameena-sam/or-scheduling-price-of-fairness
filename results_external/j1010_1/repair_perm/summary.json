@@ -1,0 +1,7 @@
+{
+  "instance": "j1010_1",
+  "decoder": "repair_perm",
+  "n_runs": 30,
+  "eval_budget": 10000,
+  "completed_utc": "2026-08-01T13:02:29.471190+00:00"
+}

@@ -1,0 +1,8 @@
+cell,control_greedy,priority_dayplus1,priority_earliest,permutation_dayplus1,permutation_earliest,random_dayplus1,random_earliest
+control_greedy,1,3.91155e-08,3.91155e-08,3.91155e-08,3.91155e-08,3.91155e-08,3.91155e-08
+priority_dayplus1,3.91155e-08,1,nan,3.91155e-08,3.91155e-08,3.91155e-08,3.91155e-08
+priority_earliest,3.91155e-08,nan,1,3.91155e-08,3.91155e-08,3.91155e-08,3.91155e-08
+permutation_dayplus1,3.91155e-08,3.91155e-08,3.91155e-08,1,0.0492936,3.91155e-08,3.91155e-08
+permutation_earliest,3.91155e-08,3.91155e-08,3.91155e-08,0.0492936,1,3.91155e-08,3.91155e-08
+random_dayplus1,3.91155e-08,3.91155e-08,3.91155e-08,3.91155e-08,3.91155e-08,1,0.677484
+random_earliest,3.91155e-08,3.91155e-08,3.91155e-08,3.91155e-08,3.91155e-08,0.677484,1

@@ -1,0 +1,9 @@
+# Baseline Pareto Local Search configuration.
+
+name: pls_baseline
+algorithm: pls
+# pop_size and n_generations are ignored for PLS.
+# PLS uses an evaluation budget instead.
+n_evaluations: 10000
+
+n_runs: 30

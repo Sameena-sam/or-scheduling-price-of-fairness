@@ -1,0 +1,11 @@
+[j1010_6] decoders: greedy, repair, repair_perm
+  NOTE: every seed returned an identical best makespan for every decoder. The search has saturated the reachable space at this instance size, so run-to-run variance is zero and the statistical tests below compare constants. Report the ranking as deterministic, not as a statistically significant difference; use a larger instance set (j20) for tests with genuine variance.
+  HV: Friedman chi2=nan p=nan
+    greedy vs repair       HV             A=0.5000 (negligible) identical in every run (no test possible)
+    greedy vs repair_perm  HV             A=0.5000 (negligible) identical in every run (no test possible)
+    repair vs repair_perm  HV             A=0.5000 (negligible) identical in every run (no test possible)
+  best_makespan: Friedman chi2=nan p=nan
+    greedy vs repair       best_makespan  A=0.5000 (negligible) identical in every run (no test possible)
+    greedy vs repair_perm  best_makespan  A=0.5000 (negligible) identical in every run (no test possible)
+    repair vs repair_perm  best_makespan  A=0.5000 (negligible) identical in every run (no test possible)
+  best makespan found = 22; published best-known = 18; gap = +22.22%

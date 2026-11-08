@@ -1,0 +1,11 @@
+# Core dependencies for the CIO skeleton.
+# Tested with Python 3.10+.
+
+pymoo>=0.6.1
+numpy>=1.24
+scipy>=1.11
+pyyaml>=6.0
+scikit-posthocs>=0.9
+
+# Development / testing
+pytest>=7.0

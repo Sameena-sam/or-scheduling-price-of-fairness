@@ -1,0 +1,390 @@
+{
+  "name": "small",
+  "horizon_days": 7,
+  "global_parameters": {
+    "icu_capacity": 1,
+    "ward_capacity": 5,
+    "overflow_allowed": false,
+    "objective_weights": {
+      "ot_idle_weight": 1.0,
+      "icu_overflow_weight": 10.0,
+      "ward_overflow_weight": 5.0
+    },
+    "seed": 20260201
+  },
+  "ots": [
+    {
+      "id": 1,
+      "permitted_specialties": [
+        "general_surgery"
+      ],
+      "equipment": [
+        "laparoscopy_tower",
+        "neurology_microscope",
+        "perfusion_machine"
+      ],
+      "daily_hours": 8.0,
+      "daily_activation_cost": 1000
+    },
+    {
+      "id": 2,
+      "permitted_specialties": [
+        "general_surgery"
+      ],
+      "equipment": [
+        "laparoscopy_tower",
+        "neurology_microscope"
+      ],
+      "daily_hours": 8.0,
+      "daily_activation_cost": 1000
+    }
+  ],
+  "teams": [
+    {
+      "id": 1,
+      "primary_specialty": "general_surgery",
+      "secondary_specialties": [],
+      "daily_hours_max": 8.0,
+      "max_consecutive_days": 5,
+      "daily_cost": 1500
+    },
+    {
+      "id": 2,
+      "primary_specialty": "general_surgery",
+      "secondary_specialties": [],
+      "daily_hours_max": 8.0,
+      "max_consecutive_days": 5,
+      "daily_cost": 1500
+    },
+    {
+      "id": 3,
+      "primary_specialty": "general_surgery",
+      "secondary_specialties": [],
+      "daily_hours_max": 8.0,
+      "max_consecutive_days": 5,
+      "daily_cost": 1500
+    }
+  ],
+  "surgery_types": [
+    {
+      "name": "lap_chole",
+      "specialty": "general_surgery",
+      "duration_hr": 1.5,
+      "icu_days": 0,
+      "ward_days": 2,
+      "equipment": [
+        "laparoscopy_tower"
+      ]
+    },
+    {
+      "name": "hernia_repair",
+      "specialty": "general_surgery",
+      "duration_hr": 1.0,
+      "icu_days": 0,
+      "ward_days": 1,
+      "equipment": []
+    },
+    {
+      "name": "colectomy",
+      "specialty": "general_surgery",
+      "duration_hr": 3.5,
+      "icu_days": 1,
+      "ward_days": 5,
+      "equipment": [
+        "laparoscopy_tower"
+      ]
+    }
+  ],
+  "surgeries": [
+    {
+      "id": 1,
+      "type": "lap_chole",
+      "specialty": "general_surgery",
+      "duration_hr": 1.5,
+      "icu_days": 0,
+      "ward_days": 2,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 5,
+      "earliest_day": 1,
+      "max_wait_days": 2
+    },
+    {
+      "id": 2,
+      "type": "colectomy",
+      "specialty": "general_surgery",
+      "duration_hr": 3.5,
+      "icu_days": 1,
+      "ward_days": 5,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 5,
+      "earliest_day": 2,
+      "max_wait_days": 2
+    },
+    {
+      "id": 3,
+      "type": "hernia_repair",
+      "specialty": "general_surgery",
+      "duration_hr": 1.0,
+      "icu_days": 0,
+      "ward_days": 1,
+      "required_equipment": [],
+      "priority": 2,
+      "earliest_day": 1,
+      "max_wait_days": 4
+    },
+    {
+      "id": 4,
+      "type": "colectomy",
+      "specialty": "general_surgery",
+      "duration_hr": 3.5,
+      "icu_days": 1,
+      "ward_days": 5,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 2,
+      "earliest_day": 3,
+      "max_wait_days": 4
+    },
+    {
+      "id": 5,
+      "type": "hernia_repair",
+      "specialty": "general_surgery",
+      "duration_hr": 1.0,
+      "icu_days": 0,
+      "ward_days": 1,
+      "required_equipment": [],
+      "priority": 5,
+      "earliest_day": 3,
+      "max_wait_days": 2
+    },
+    {
+      "id": 6,
+      "type": "colectomy",
+      "specialty": "general_surgery",
+      "duration_hr": 3.5,
+      "icu_days": 1,
+      "ward_days": 5,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 4,
+      "earliest_day": 2,
+      "max_wait_days": 1
+    },
+    {
+      "id": 7,
+      "type": "hernia_repair",
+      "specialty": "general_surgery",
+      "duration_hr": 1.0,
+      "icu_days": 0,
+      "ward_days": 1,
+      "required_equipment": [],
+      "priority": 2,
+      "earliest_day": 1,
+      "max_wait_days": 5
+    },
+    {
+      "id": 8,
+      "type": "hernia_repair",
+      "specialty": "general_surgery",
+      "duration_hr": 1.0,
+      "icu_days": 0,
+      "ward_days": 1,
+      "required_equipment": [],
+      "priority": 2,
+      "earliest_day": 4,
+      "max_wait_days": 3
+    },
+    {
+      "id": 9,
+      "type": "lap_chole",
+      "specialty": "general_surgery",
+      "duration_hr": 1.5,
+      "icu_days": 0,
+      "ward_days": 2,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 3,
+      "earliest_day": 3,
+      "max_wait_days": 2
+    },
+    {
+      "id": 10,
+      "type": "hernia_repair",
+      "specialty": "general_surgery",
+      "duration_hr": 1.0,
+      "icu_days": 0,
+      "ward_days": 1,
+      "required_equipment": [],
+      "priority": 1,
+      "earliest_day": 3,
+      "max_wait_days": 4
+    },
+    {
+      "id": 11,
+      "type": "lap_chole",
+      "specialty": "general_surgery",
+      "duration_hr": 1.5,
+      "icu_days": 0,
+      "ward_days": 2,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 2,
+      "earliest_day": 5,
+      "max_wait_days": 2
+    },
+    {
+      "id": 12,
+      "type": "colectomy",
+      "specialty": "general_surgery",
+      "duration_hr": 3.5,
+      "icu_days": 1,
+      "ward_days": 5,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 1,
+      "earliest_day": 1,
+      "max_wait_days": 6
+    },
+    {
+      "id": 13,
+      "type": "hernia_repair",
+      "specialty": "general_surgery",
+      "duration_hr": 1.0,
+      "icu_days": 0,
+      "ward_days": 1,
+      "required_equipment": [],
+      "priority": 3,
+      "earliest_day": 5,
+      "max_wait_days": 2
+    },
+    {
+      "id": 14,
+      "type": "lap_chole",
+      "specialty": "general_surgery",
+      "duration_hr": 1.5,
+      "icu_days": 0,
+      "ward_days": 2,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 1,
+      "earliest_day": 5,
+      "max_wait_days": 2
+    },
+    {
+      "id": 15,
+      "type": "colectomy",
+      "specialty": "general_surgery",
+      "duration_hr": 3.5,
+      "icu_days": 1,
+      "ward_days": 5,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 3,
+      "earliest_day": 3,
+      "max_wait_days": 3
+    },
+    {
+      "id": 16,
+      "type": "hernia_repair",
+      "specialty": "general_surgery",
+      "duration_hr": 1.0,
+      "icu_days": 0,
+      "ward_days": 1,
+      "required_equipment": [],
+      "priority": 1,
+      "earliest_day": 4,
+      "max_wait_days": 3
+    },
+    {
+      "id": 17,
+      "type": "hernia_repair",
+      "specialty": "general_surgery",
+      "duration_hr": 1.0,
+      "icu_days": 0,
+      "ward_days": 1,
+      "required_equipment": [],
+      "priority": 3,
+      "earliest_day": 4,
+      "max_wait_days": 3
+    },
+    {
+      "id": 18,
+      "type": "colectomy",
+      "specialty": "general_surgery",
+      "duration_hr": 3.5,
+      "icu_days": 1,
+      "ward_days": 5,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 3,
+      "earliest_day": 4,
+      "max_wait_days": 3
+    },
+    {
+      "id": 19,
+      "type": "hernia_repair",
+      "specialty": "general_surgery",
+      "duration_hr": 1.0,
+      "icu_days": 0,
+      "ward_days": 1,
+      "required_equipment": [],
+      "priority": 3,
+      "earliest_day": 2,
+      "max_wait_days": 3
+    },
+    {
+      "id": 20,
+      "type": "lap_chole",
+      "specialty": "general_surgery",
+      "duration_hr": 1.5,
+      "icu_days": 0,
+      "ward_days": 2,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 3,
+      "earliest_day": 4,
+      "max_wait_days": 3
+    },
+    {
+      "id": 21,
+      "type": "lap_chole",
+      "specialty": "general_surgery",
+      "duration_hr": 1.5,
+      "icu_days": 0,
+      "ward_days": 2,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 3,
+      "earliest_day": 5,
+      "max_wait_days": 2
+    },
+    {
+      "id": 22,
+      "type": "lap_chole",
+      "specialty": "general_surgery",
+      "duration_hr": 1.5,
+      "icu_days": 0,
+      "ward_days": 2,
+      "required_equipment": [
+        "laparoscopy_tower"
+      ],
+      "priority": 5,
+      "earliest_day": 1,
+      "max_wait_days": 2
+    }
+  ]
+}

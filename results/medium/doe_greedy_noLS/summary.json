@@ -1,0 +1,22 @@
+{
+  "config": {
+    "name": "doe_greedy_noLS",
+    "algorithm": "nsga2",
+    "pop_size": 100,
+    "n_generations": 100,
+    "n_evaluations": 10000,
+    "crossover": "pmx",
+    "crossover_prob": 0.9,
+    "mutation": "swap",
+    "mutation_prob": 1.0,
+    "initialiser": "random_permutation",
+    "n_partitions": 13,
+    "n_runs": 30,
+    "seeds": null
+  },
+  "decoder": "greedy",
+  "local_search": null,
+  "instance_path": "instances\\ot_medium.json",
+  "n_runs": 30,
+  "completed_utc": "2026-07-29T17:30:51.600363+00:00"
+}
